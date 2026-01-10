@@ -405,7 +405,7 @@ img {
 /* Hero Content */
 .hero-content-luxury {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -2259,5 +2259,613 @@ p {
     
     .success-modal-content {
         padding: 2.5rem 1.5rem;
+    }
+}
+
+
+/* ========================================
+   COMPREHENSIVE RESPONSIVE STYLES
+   ======================================== */
+
+/* Extra Small Devices (phones, 320px - 480px) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-sm: 0.875rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+    
+    /* Header */
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .logo-sub {
+        font-size: 0.5rem;
+        letter-spacing: 0.4em;
+    }
+    
+    .search-toggle {
+        display: none;
+    }
+    
+    /* Hero */
+    .hero-content-luxury {
+        bottom: 8%;
+        width: 95%;
+    }
+    
+    .hero-tagline {
+        font-size: 0.625rem;
+        letter-spacing: 0.25em;
+    }
+    
+    .hero-description {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    
+    .hero-cta {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.6875rem;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    /* Storytelling Section */
+    .problem-zone,
+    .solution-zone {
+        padding: 60px 0;
+    }
+    
+    .section-label {
+        font-size: 0.625rem;
+    }
+    
+    .section-title-serif {
+        font-size: 1.5rem;
+    }
+    
+    .problem-list-luxury li {
+        font-size: 0.9375rem;
+    }
+    
+    .glass-card {
+        padding: var(--spacing-md);
+    }
+    
+    .glass-card-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .glass-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .glass-card p {
+        font-size: 0.875rem;
+    }
+    
+    /* Benefits Section */
+    .benefits-luxury {
+        padding: 60px 0;
+    }
+    
+    .benefit-row {
+        margin-bottom: 50px;
+    }
+    
+    .benefit-number {
+        font-size: 3rem;
+    }
+    
+    .benefit-title {
+        font-size: 1.25rem;
+    }
+    
+    .benefit-desc {
+        font-size: 0.9375rem;
+    }
+    
+    /* Trust Section */
+    .trust-luxury {
+        padding: 60px 0;
+    }
+    
+    .trust-icon-gold {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .trust-item-luxury h3 {
+        font-size: 1rem;
+    }
+    
+    .trust-item-luxury p {
+        font-size: 0.875rem;
+    }
+    
+    /* Product Detail */
+    .product-detail {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .product-title {
+        font-size: 1.375rem;
+    }
+    
+    .product-desc {
+        font-size: 0.9375rem;
+    }
+    
+    .price-sale {
+        font-size: 1.5rem;
+    }
+    
+    .size-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .color-swatch {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Form Section */
+    .form-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .form-section h2 {
+        font-size: 1.375rem;
+    }
+    
+    .form-subtitle {
+        font-size: 0.9375rem;
+    }
+    
+    .form-urgency {
+        font-size: 0.875rem;
+    }
+    
+    .lead-form {
+        padding: 1.25rem;
+    }
+    
+    .form-group input {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+    
+    /* Final CTA */
+    .final-cta h2 {
+        font-size: 1.25rem;
+    }
+    
+    .final-cta p {
+        font-size: 1rem;
+    }
+    
+    /* Cart Sidebar */
+    .cart-header {
+        padding: 1.25rem 1rem;
+    }
+    
+    .cart-header h3 {
+        font-size: 1.125rem;
+    }
+    
+    .cart-body {
+        padding: 1rem;
+    }
+    
+    .cart-item-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cart-item-name {
+        font-size: 0.875rem;
+    }
+    
+    .cart-footer {
+        padding: 1.25rem 1rem;
+    }
+    
+    .cart-total-price {
+        font-size: 1.25rem;
+    }
+    
+    /* Order Modal */
+    .order-modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-field input {
+        font-size: 1rem;
+    }
+    
+    .form-field label {
+        font-size: 0.875rem;
+    }
+    
+    /* Success Modal */
+    .success-icon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .success-title {
+        font-size: 1.25rem;
+    }
+    
+    .success-message {
+        font-size: 0.875rem;
+    }
+}
+
+/* Small Devices (landscape phones, 481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* Storytelling */
+    .problem-zone,
+    .solution-zone {
+        padding: 80px 0;
+    }
+    
+    .solution-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Benefits */
+    .benefits-luxury {
+        padding: 80px 0;
+    }
+    
+    .benefit-image {
+        max-width: 400px;
+    }
+    
+    /* Trust */
+    .trust-luxury {
+        padding: 80px 0;
+    }
+    
+    .trust-grid-luxury {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Product */
+    .variant-thumbnails {
+        gap: 0.5rem;
+    }
+    
+    .size-options {
+        gap: 0.5rem;
+    }
+    
+    .size-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
+
+/* Medium Devices (tablets, 768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Hero */
+    .hero-content-luxury {
+        bottom: 12%;
+    }
+    
+    /* Storytelling */
+    .problem-zone,
+    .solution-zone {
+        padding: 100px 0;
+    }
+    
+    .problem-content {
+        max-width: 600px;
+    }
+    
+    /* Benefits - 2 column on tablet */
+    .benefits-luxury {
+        padding: 100px 0;
+    }
+    
+    .benefit-row {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
+    
+    .benefit-row-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .benefit-image,
+    .benefit-content {
+        flex: 1;
+        max-width: none;
+    }
+    
+    .benefit-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Trust */
+    .trust-luxury {
+        padding: 100px 0;
+    }
+    
+    /* Product - Side by side on tablet */
+    .product-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .product-gallery {
+        flex: 1;
+        max-width: 50%;
+    }
+    
+    .product-info {
+        flex: 1;
+        max-width: 50%;
+        padding-left: var(--spacing-md);
+    }
+    
+    /* Form */
+    .lead-form {
+        max-width: 450px;
+    }
+}
+
+/* Large Devices (desktops, 1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        max-width: 1100px;
+    }
+    
+    /* Product */
+    .product-gallery {
+        max-width: 52%;
+    }
+    
+    .product-info {
+        max-width: 48%;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1280px+) */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 2rem;
+    }
+    
+    /* Hero */
+    .hero-description {
+        font-size: 1.125rem;
+    }
+    
+    /* Storytelling */
+    .problem-zone,
+    .solution-zone {
+        padding: 140px 0;
+    }
+    
+    .problem-content {
+        max-width: 800px;
+    }
+    
+    .problem-list-luxury li {
+        font-size: 1.125rem;
+    }
+    
+    .glass-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Benefits */
+    .benefits-luxury {
+        padding: 140px 0;
+    }
+    
+    .benefit-row {
+        margin-bottom: 100px;
+        gap: var(--spacing-xl);
+    }
+    
+    .benefit-number {
+        font-size: 5rem;
+    }
+    
+    .benefit-desc {
+        font-size: 1.0625rem;
+    }
+    
+    /* Trust */
+    .trust-luxury {
+        padding: 140px 0;
+    }
+    
+    /* Product */
+    .product-detail {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .main-image {
+        aspect-ratio: 16/10;
+    }
+}
+
+/* Height-based adjustments for short screens */
+@media (max-height: 700px) {
+    .luxury-hero {
+        min-height: auto;
+        padding: 100px 0 80px;
+    }
+    
+    .hero-content-luxury {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 896px) and (orientation: landscape) {
+    .luxury-hero {
+        min-height: auto;
+        padding: 80px 0 60px;
+    }
+    
+    .masked-title {
+        font-size: clamp(2.5rem, 12vw, 5rem);
+    }
+    
+    .masked-subtitle {
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+    
+    .hero-content-luxury {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: var(--spacing-md);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    /* Product in landscape */
+    .product-wrapper {
+        flex-direction: row;
+    }
+    
+    .product-gallery,
+    .product-info {
+        flex: 1;
+        max-width: 50%;
+    }
+    
+    .product-info {
+        padding-left: var(--spacing-md);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .nav-link {
+        padding: 0.75rem 0;
+    }
+    
+    .color-swatch {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .size-btn {
+        min-height: 48px;
+    }
+    
+    .cart-item-remove {
+        padding: 0.5rem;
+    }
+    
+    /* Disable hover effects that don't work well on touch */
+    .main-image:hover img {
+        transform: none;
+    }
+    
+    .benefit-image:hover img {
+        transform: none;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+    
+    .glass-card:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .luxury-header,
+    .cart-sidebar,
+    .order-modal,
+    .success-modal,
+    .scroll-indicator,
+    .hero-cta,
+    .product-actions,
+    .form-section,
+    .final-cta {
+        display: none !important;
+    }
+    
+    .luxury-hero {
+        min-height: auto;
+        padding: 2rem 0;
+        background: none;
+    }
+    
+    .masked-title,
+    .masked-subtitle {
+        color: var(--color-deep-navy) !important;
+        -webkit-text-fill-color: var(--color-deep-navy) !important;
+        background: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    .luxury-header {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    
+    .cart-sidebar-content {
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+    
+    .footer {
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
     }
 }
