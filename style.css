@@ -3552,3 +3552,26 @@ p {
         padding: 0.875rem 1rem;
     }
 }
+
+
+/* ========================================
+   NO HERO - DIRECT PRODUCT ACCESS
+   ======================================== */
+
+/* Header always visible with background */
+.luxury-header {
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* First section (Product Detail) needs padding for fixed header */
+.product-detail {
+    padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        padding-top: 100px;
+    }
+}
