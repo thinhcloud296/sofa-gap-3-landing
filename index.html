@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sofa Gập 3 Thông Minh – Giải pháp sang trọng cho không gian hiện đại. Ngồi, nằm, ngủ linh hoạt. Giao hàng tận nơi toàn quốc.">
-    <meta name="keywords" content="sofa gập, sofa thông minh, sofa 3 trong 1, nội thất hiện đại, sofa tiết kiệm không gian">
-    <title>Sofa Gập 3 Thông Minh – Giải Pháp Sang Trọng Cho Không Gian Hiện Đại</title>
+    <meta name="description" content="CASARO SOFA – Nội thất sofa cao cấp, thiết kế sang trọng tối giản cho không gian sống hiện đại.">
+    <meta name="keywords" content="sofa cao cấp, nội thất luxury, sofa thông minh, CASARO SOFA">
+    <title>CASARO SOFA – Luxury Minimalist Furniture</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     
     <!-- META PIXEL - PASTE YOUR CODE HERE -->
@@ -38,139 +44,435 @@
     -->
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Sofa Gập 3 Thông Minh – Giải Pháp Sang Trọng Cho Không Gian Hiện Đại</h1>
-            <p class="subheadline">Ngồi – Nằm – Ngủ linh hoạt. Tiết kiệm không gian mà vẫn đẳng cấp.</p>
-            <a href="#form-section" class="cta-button">Đặt Mua Ngay – Giao Hàng Tận Nơi</a>
+    <!-- LUXURY HEADER -->
+    <header class="luxury-header" id="luxuryHeader">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <span class="logo-text">CASARO</span>
+                <span class="logo-sub">SOFA</span>
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Trang Chủ</a></li>
+                    <li><a href="#product-detail" class="nav-link">Sản Phẩm</a></li>
+                    <li><a href="#" class="nav-link">Bộ Sưu Tập</a></li>
+                    <li><a href="#" class="nav-link">Về Chúng Tôi</a></li>
+                    <li><a href="#form-section" class="nav-link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-wrapper" id="searchWrapper">
+                    <button class="search-toggle" id="searchToggle" aria-label="Tìm kiếm">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
+                    </div>
+                </div>
+                
+                <!-- Cart -->
+                <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LUXURY HERO SECTION -->
+    <section class="luxury-hero" id="luxuryHero">
+        <div class="hero-bg-overlay"></div>
+        
+        <!-- Hero Text Mask -->
+        <div class="hero-text-mask" id="heroTextMask">
+            <h1 class="masked-title">CASARO</h1>
+            <p class="masked-subtitle">SOFA</p>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content-luxury">
+            <p class="hero-tagline">Minimalist Luxury Living</p>
+            <p class="hero-description">Nghệ thuật nội thất tối giản, nâng tầm không gian sống của bạn</p>
+            <a href="#product-detail" class="hero-cta">
+                <span>Khám Phá Ngay</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Cuộn xuống</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- PROBLEM SECTION -->
-    <section class="problem">
-        <div class="container">
-            <h2>Bạn Đang Gặp Phải Những Vấn Đề Này?</h2>
-            <div class="problem-list">
-                <div class="problem-item">
-                    <span class="icon">🏠</span>
-                    <p>Không gian sống chật hẹp, khó bố trí nội thất</p>
+    <!-- STORYTELLING SECTION: VẤN ĐỀ & GIẢI PHÁP -->
+    <section class="storytelling-section">
+        <!-- Phần Vấn Đề - Nền xám khói -->
+        <div class="problem-zone">
+            <div class="container">
+                <div class="problem-content">
+                    <span class="section-label reveal" data-delay="0">VẤN ĐỀ</span>
+                    <h2 class="section-title-serif reveal" data-delay="100">Bạn đang gặp khó khăn<br>về không gian?</h2>
+                    <ul class="problem-list-luxury">
+                        <li class="reveal" data-delay="200">
+                            <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M9 9h6v6H9z"/>
+                            </svg>
+                            <span>Không gian sống chật hẹp, khó bố trí nội thất hợp lý</span>
+                        </li>
+                        <li class="reveal" data-delay="300">
+                            <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8"/>
+                                <path d="M12 18v4M8 22h8"/>
+                            </svg>
+                            <span>Sofa truyền thống cồng kềnh, chiếm nhiều diện tích</span>
+                        </li>
+                        <li class="reveal" data-delay="400">
+                            <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                            </svg>
+                            <span>Thiếu giải pháp nghỉ ngơi linh hoạt cho khách đến chơi</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="problem-item">
-                    <span class="icon">🛋️</span>
-                    <p>Sofa truyền thống cồng kềnh, chiếm nhiều diện tích</p>
-                </div>
-                <div class="problem-item">
-                    <span class="icon">😴</span>
-                    <p>Thiếu giải pháp nghỉ ngơi linh hoạt cho khách đến chơi</p>
+            </div>
+        </div>
+        
+        <!-- Phần Giải Pháp - Nền Navy -->
+        <div class="solution-zone">
+            <div class="container">
+                <span class="section-label section-label-gold reveal" data-delay="0">GIẢI PHÁP</span>
+                <h2 class="section-title-serif section-title-gold reveal" data-delay="100">Sofa Gấp 3 Thông Minh<br><span>Giải Pháp Hoàn Hảo</span></h2>
+                
+                <div class="solution-cards">
+                    <div class="glass-card reveal" data-delay="200">
+                        <div class="glass-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>3 trong 1</h3>
+                        <p>Sofa – Ghế dài – Giường ngủ trong một sản phẩm duy nhất</p>
+                    </div>
+                    
+                    <div class="glass-card reveal" data-delay="300">
+                        <div class="glass-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                        </div>
+                        <h3>Gập mở dễ dàng</h3>
+                        <p>Chuyển đổi nhanh chóng chỉ trong vài giây, không cần công cụ</p>
+                    </div>
+                    
+                    <div class="glass-card reveal" data-delay="400">
+                        <div class="glass-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Phong cách hiện đại</h3>
+                        <p>Thiết kế tối giản, phù hợp mọi không gian nội thất cao cấp</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOLUTION SECTION -->
-    <section class="solution">
+    <!-- BENEFITS SECTION - ZIG-ZAG LAYOUT -->
+    <section class="benefits-luxury">
         <div class="container">
-            <h2>Giải Pháp Hoàn Hảo: Sofa Gập 3 Thông Minh</h2>
-            <div class="solution-content">
-                <div class="solution-item">
-                    <span class="highlight">3 trong 1</span>
-                    <p>Sofa – Ghế dài – Giường ngủ trong một sản phẩm duy nhất</p>
+            <div class="benefits-header reveal" data-delay="0">
+                <span class="section-label">LỢI ÍCH</span>
+                <h2 class="section-title-serif">Lợi Ích Vượt Trội</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <!-- Benefit Row 1 -->
+            <div class="benefit-row">
+                <div class="benefit-image reveal" data-delay="100">
+                    <img src="assets/images/sofagapgon/1.1.png" alt="Tối ưu không gian" class="lazy-img" data-src="assets/images/sofagapgon/1.1.png">
                 </div>
-                <div class="solution-item">
-                    <span class="highlight">Gập mở dễ dàng</span>
-                    <p>Chuyển đổi nhanh chóng chỉ trong vài giây</p>
+                <div class="benefit-content reveal" data-delay="200">
+                    <span class="benefit-number">01</span>
+                    <h3 class="benefit-title">Tối Ưu Không Gian</h3>
+                    <p class="benefit-desc">Thiết kế thông minh giúp tiết kiệm tối đa diện tích. Phù hợp hoàn hảo cho căn hộ nhỏ, studio và không gian sống hiện đại.</p>
                 </div>
-                <div class="solution-item">
-                    <span class="highlight">Phong cách hiện đại</span>
-                    <p>Thiết kế tối giản, phù hợp mọi không gian nội thất</p>
+            </div>
+            
+            <!-- Benefit Row 2 - Reversed -->
+            <div class="benefit-row benefit-row-reverse">
+                <div class="benefit-image reveal" data-delay="100">
+                    <img src="assets/images/sofagapgon/3.4.png" alt="Ngồi êm ngủ thoải mái" class="lazy-img" data-src="assets/images/sofagapgon/3.4.png">
+                </div>
+                <div class="benefit-content reveal" data-delay="200">
+                    <span class="benefit-number">02</span>
+                    <h3 class="benefit-title">Ngồi Êm – Ngủ Thoải Mái</h3>
+                    <p class="benefit-desc">Đệm cao cấp với độ đàn hồi hoàn hảo, hỗ trợ cột sống. Mang đến trải nghiệm nghỉ ngơi tuyệt vời cho cả ngồi và nằm.</p>
+                </div>
+            </div>
+            
+            <!-- Benefit Row 3 -->
+            <div class="benefit-row">
+                <div class="benefit-image reveal" data-delay="100">
+                    <img src="assets/images/sofagapgon/6.2.png" alt="Dễ vệ sinh di chuyển" class="lazy-img" data-src="assets/images/sofagapgon/6.2.png">
+                </div>
+                <div class="benefit-content reveal" data-delay="200">
+                    <span class="benefit-number">03</span>
+                    <h3 class="benefit-title">Bền Bỉ & Êm Ái</h3>
+                    <p class="benefit-desc">Chất liệu vải cao cấp chống bám bẩn, dễ lau chùi. Trọng lượng nhẹ, dễ dàng di chuyển khi cần thay đổi không gian.</p>
                 </div>
             </div>
         </div>
     </section>
-</body>
-</html>
 
-    <!-- BENEFITS SECTION -->
-    <section class="benefits">
+    <!-- TRUST SECTION - MINIMALIST -->
+    <section class="trust-luxury">
         <div class="container">
-            <h2>Lợi Ích Vượt Trội</h2>
-            <ul class="benefits-list">
-                <li>✓ Tối ưu không gian sống – phù hợp căn hộ nhỏ, studio</li>
-                <li>✓ Ngồi thoải mái, ngủ êm ái – đệm cao cấp hỗ trợ cột sống</li>
-                <li>✓ Dễ vệ sinh, dễ di chuyển – chất liệu chống bám bẩn</li>
-                <li>✓ Thiết kế sang trọng – nâng tầm không gian sống</li>
-                <li>✓ Tiết kiệm chi phí – thay thế cả sofa lẫn giường phụ</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- VISUAL SECTION -->
-    <section class="visual">
-        <div class="container">
-            <h2>Xem Chi Tiết Sản Phẩm</h2>
-            <div class="visual-grid">
-                <div class="visual-item">
-                    <img src="assets/images/sofagapgon/1.1.png" alt="Sofa Gập 3 - Chế độ ngồi" loading="lazy">
-                    <p>Chế độ ngồi</p>
-                </div>
-                <div class="visual-item">
-                    <img src="assets/images/sofagapgon/2.1.png" alt="Sofa Gập 3 - Chế độ nằm nghỉ" loading="lazy">
-                    <p>Chế độ nằm nghỉ</p>
-                </div>
-                <div class="visual-item">
-                    <img src="assets/images/sofagapgon/3.1.png" alt="Sofa Gập 3 - Chế độ ngủ" loading="lazy">
-                    <p>Chế độ ngủ</p>
-                </div>
-                <div class="visual-item">
-                    <img src="assets/images/sofagapgon/4.1.png" alt="Sofa Gập 3 - Chi tiết sản phẩm" loading="lazy">
-                    <p>Chi tiết sản phẩm</p>
-                </div>
+            <div class="trust-header reveal" data-delay="0">
+                <span class="section-label">CAM KẾT</span>
+                <h2 class="section-title-serif">Cam Kết Của Chúng Tôi</h2>
+                <div class="title-underline"></div>
             </div>
-            <!-- VIDEO PLACEHOLDER -->
-            <div class="video-placeholder">
-                <!-- PASTE VIDEO EMBED CODE HERE -->
-                <p>Video giới thiệu sản phẩm</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST SECTION -->
-    <section class="trust">
-        <div class="container">
-            <h2>Cam Kết Của Chúng Tôi</h2>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <span class="trust-icon">🚚</span>
-                    <h3>Giao hàng toàn quốc</h3>
+            
+            <div class="trust-grid-luxury">
+                <div class="trust-item-luxury reveal" data-delay="100">
+                    <div class="trust-icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#goldGradient)" stroke-width="1.5">
+                            <defs>
+                                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#c5a059"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="1" y="3" width="15" height="13" rx="2"/>
+                            <path d="M16 8h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2"/>
+                        </svg>
+                    </div>
+                    <h3>Giao Hàng Toàn Quốc</h3>
                     <p>Miễn phí vận chuyển nội thành</p>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">👀</span>
-                    <h3>Kiểm tra trước khi nhận</h3>
-                    <p>Xem hàng tận mắt, hài lòng mới thanh toán</p>
+                
+                <div class="trust-item-luxury reveal" data-delay="200">
+                    <div class="trust-icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#goldGradient)" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Kiểm Tra Trước Nhận</h3>
+                    <p>Xem hàng tận mắt, kiểm tra trước khi thanh toán</p>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">📞</span>
-                    <h3>Tư vấn nhanh chóng</h3>
-                    <p>Hỗ trợ 24/7, giải đáp mọi thắc mắc</p>
+                
+                <div class="trust-item-luxury reveal" data-delay="300">
+                    <div class="trust-icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#goldGradient)" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>Tư Vấn 24/7</h3>
+                    <p>Hỗ trợ nhanh chóng, giải đáp mọi thắc mắc</p>
                 </div>
-                <div class="trust-item">
-                    <span class="trust-icon">🔄</span>
-                    <h3>Đổi trả dễ dàng</h3>
-                    <p>Hoàn tiền nếu lỗi từ nhà sản xuất</p>
+                
+                <div class="trust-item-luxury reveal" data-delay="400">
+                    <div class="trust-icon-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="url(#goldGradient)" stroke-width="1.5">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <polyline points="1 20 1 14 7 14"/>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                        </svg>
+                    </div>
+                    <h3>Đổi Trả Dễ Dàng</h3>
+                    <p>Bảo hành nếu lỗi từ nhà sản xuất</p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- PRODUCT DETAIL SECTION -->
+    <section class="product-detail" id="product-detail">
+        <div class="container">
+            <div class="product-wrapper">
+                <!-- Left: Product Gallery -->
+                <div class="product-gallery reveal" data-delay="0">
+                    <div class="main-image">
+                        <img id="mainImg" data-src="assets/images/sofagapgon/1.1.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" alt="Sofa Gấp Gọn Đa Năng" class="lazy-img">
+                    </div>
+                    <div class="variant-thumbnails" id="variantThumbs">
+                        <img data-src="assets/images/sofagapgon/1.1.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" alt="Biến thể 1" class="thumb active lazy-img">
+                        <img data-src="assets/images/sofagapgon/1.2.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" alt="Biến thể 2" class="thumb lazy-img">
+                        <img data-src="assets/images/sofagapgon/1.3.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" alt="Biến thể 3" class="thumb lazy-img">
+                        <img data-src="assets/images/sofagapgon/1.4.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E" alt="Biến thể 4" class="thumb lazy-img">
+                    </div>
+                </div>
+                
+                <!-- Right: Product Info -->
+                <div class="product-info">
+                    <h2 class="product-title reveal" data-delay="100">Sofa Gấp Gọn Đa Năng</h2>
+                    <p class="product-desc reveal" data-delay="150">Chất liệu vải cao cấp, khung thép chịu lực, thiết kế thông minh tiết kiệm diện tích. Phù hợp căn hộ nhỏ, phòng trọ, nhà phố hiện đại.</p>
+                    
+                    <!-- Price -->
+                    <div class="product-price reveal" data-delay="200">
+                        <span class="price-original" id="priceOriginal">1.689.000đ</span>
+                        <span class="price-sale" id="priceSale">1.299.000đ</span>
+                        <span class="price-badge">Giảm 23%</span>
+                    </div>
+                    
+                    <!-- Size Selection -->
+                    <div class="product-option reveal" data-delay="250">
+                        <p class="option-label">Kích thước:</p>
+                        <div class="size-options" id="sizeOptions">
+                            <button type="button" class="size-btn active" data-size="1" data-original="1.689.000" data-sale="1.299.000">80cm x 1m85</button>
+                            <button type="button" class="size-btn" data-size="2" data-original="1.949.000" data-sale="1.499.000">1m x 1m85</button>
+                            <button type="button" class="size-btn" data-size="3" data-original="2.209.000" data-sale="1.699.000">1m2 x 1m85</button>
+                            <button type="button" class="size-btn" data-size="4" data-original="2.599.000" data-sale="1.999.000">1m5 x 1m85</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Color Selection -->
+                    <div class="product-option reveal" data-delay="300">
+                        <p class="option-label">Màu sắc: <span id="colorName">Xám</span></p>
+                        <div class="color-options">
+                            <button type="button" class="color-swatch active" data-color="1" data-name="Xám" style="background-color: #878377;" title="Xám"></button>
+                            <button type="button" class="color-swatch" data-color="2" data-name="Đen" style="background-color: #121212;" title="Đen"></button>
+                            <button type="button" class="color-swatch" data-color="3" data-name="Trắng kem" style="background-color: #fff6da;" title="Trắng kem"></button>
+                            <button type="button" class="color-swatch" data-color="4" data-name="Đỏ" style="background-color: #901923;" title="Đỏ"></button>
+                            <button type="button" class="color-swatch" data-color="5" data-name="Nâu" style="background-color: #5e4230;" title="Nâu"></button>
+                            <button type="button" class="color-swatch" data-color="6" data-name="Xanh navy" style="background-color: #394668;" title="Xanh navy"></button>
+                            <button type="button" class="color-swatch" data-color="7" data-name="Xanh lá đậm" style="background-color: #265c51;" title="Xanh lá đậm"></button>
+                            <button type="button" class="color-swatch" data-color="8" data-name="Xanh ngọc" style="background-color: #0f9b8e;" title="Xanh ngọc"></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="product-actions reveal" data-delay="350">
+                        <button type="button" class="btn-primary btn-order-now" id="orderNowBtn">ĐẶT HÀNG NGAY</button>
+                        <button type="button" class="btn-secondary" id="addToCart">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+    (function() {
+        var currentColor = '1';
+        var mainImg = document.getElementById('mainImg');
+        var thumbsContainer = document.getElementById('variantThumbs');
+        var swatches = document.querySelectorAll('.color-swatch');
+        var sizeBtns = document.querySelectorAll('.size-btn');
+        var colorNameEl = document.getElementById('colorName');
+        var priceOriginalEl = document.getElementById('priceOriginal');
+        var priceSaleEl = document.getElementById('priceSale');
+        
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ';
+        }
+        
+        function updateThumbnails(color) {
+            thumbsContainer.innerHTML = '';
+            for (var i = 1; i <= 4; i++) {
+                var img = document.createElement('img');
+                img.src = 'assets/images/sofagapgon/' + color + '.' + i + '.png';
+                img.alt = 'Biến thể ' + i;
+                img.className = 'thumb loaded' + (i === 1 ? ' active' : '');
+                thumbsContainer.appendChild(img);
+            }
+            mainImg.src = 'assets/images/sofagapgon/' + color + '.1.png';
+            mainImg.classList.add('loaded');
+            attachThumbEvents();
+        }
+        
+        function attachThumbEvents() {
+            var thumbs = thumbsContainer.querySelectorAll('.thumb');
+            thumbs.forEach(function(thumb) {
+                thumb.addEventListener('click', function() {
+                    thumbs.forEach(function(t) { t.classList.remove('active'); });
+                    this.classList.add('active');
+                    mainImg.src = this.src;
+                });
+            });
+        }
+        
+        // Color selection
+        swatches.forEach(function(swatch) {
+            swatch.addEventListener('click', function() {
+                swatches.forEach(function(s) { s.classList.remove('active'); });
+                this.classList.add('active');
+                currentColor = this.dataset.color;
+                colorNameEl.textContent = this.dataset.name;
+                updateThumbnails(currentColor);
+            });
+        });
+        
+        // Size selection
+        sizeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                sizeBtns.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                priceOriginalEl.textContent = formatPrice(this.dataset.original);
+                priceSaleEl.textContent = formatPrice(this.dataset.sale);
+            });
+        });
+        
+        // Initial load - trigger lazy load for visible images
+        setTimeout(function() {
+            var initialImages = thumbsContainer.querySelectorAll('.lazy-img');
+            initialImages.forEach(function(img) {
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                }
+            });
+            if (mainImg.dataset.src) {
+                mainImg.src = mainImg.dataset.src;
+                mainImg.classList.add('loaded');
+            }
+        }, 100);
+        
+        attachThumbEvents();
+    })();
+    </script>
+
+    <!-- TRUST SECTION -->
+    <section class="trust" style="display: none;">
+        <!-- Hidden - replaced by trust-luxury -->
     </section>
 
     <!-- LEAD FORM SECTION -->
     <section class="form-section" id="form-section">
         <div class="container">
-            <h2>Đăng Ký Nhận Tư Vấn & Báo Giá Ưu Đãi</h2>
-            <p class="form-subtitle">Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí trong 15 phút!</p>
+            <h2 class="reveal" data-delay="0">Đăng Ký Nhận Tư Vấn & Báo Giá Ưu Đãi</h2>
+            <p class="form-subtitle reveal" data-delay="100">Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí trong 15 phút!</p>
             
-            <form name="lead-form" method="POST" data-netlify="true" action="/thankyou.html" class="lead-form">
+            <p class="form-urgency reveal" data-delay="150">⏰ Ưu đãi có hạn – Đăng ký sớm để được giá tốt nhất!</p>
+            
+            <form name="lead-form" method="POST" data-netlify="true" action="/thankyou.html" class="lead-form reveal" data-delay="200">
                 <input type="hidden" name="form-name" value="lead-form">
                 
                 <div class="form-group">
@@ -196,17 +498,619 @@
     <!-- FINAL CTA SECTION -->
     <section class="final-cta">
         <div class="container">
-            <h2>Đừng Bỏ Lỡ Cơ Hội Sở Hữu Sofa Thông Minh!</h2>
-            <p>Số lượng có hạn – Ưu đãi chỉ áp dụng trong thời gian ngắn</p>
-            <a href="#form-section" class="cta-button">Đặt Hàng Ngay Hôm Nay</a>
+            <h2 class="reveal" data-delay="0">Bạn Còn Thắc Mắc? Hãy Để Chúng Tôi Tư Vấn!</h2>
+            <a href="#form-section" class="cta-button reveal" data-delay="200">Nhận Tư Vấn Miễn Phí</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Sofa Gập 3 Thông Minh. All rights reserved.</p>
+            <p>&copy; 2026 CASARO SOFA. All rights reserved.</p>
         </div>
     </footer>
+    
+    <!-- LUXURY HEADER & HERO SCRIPTS -->
+    <script>
+    (function() {
+        // ========================================
+        // INTERSECTION OBSERVER - LAZY LOADING
+        // ========================================
+        var lazyImages = document.querySelectorAll('.lazy-img');
+        
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+        
+        lazyImages.forEach(function(img) {
+            imageObserver.observe(img);
+        });
+        
+        // ========================================
+        // INTERSECTION OBSERVER - SCROLL REVEAL
+        // ========================================
+        var revealElements = document.querySelectorAll('.reveal');
+        
+        var revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var delay = parseInt(el.dataset.delay) || 0;
+                    
+                    setTimeout(function() {
+                        el.classList.add('revealed');
+                    }, delay);
+                    
+                    observer.unobserve(el);
+                }
+            });
+        }, {
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        });
+        
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+        
+        // ========================================
+        // HERO CONTENT REVEAL ON LOAD
+        // ========================================
+        window.addEventListener('load', function() {
+            var heroContent = document.querySelector('.hero-content-luxury');
+            var heroTagline = document.querySelector('.hero-tagline');
+            var heroDesc = document.querySelector('.hero-description');
+            var heroCta = document.querySelector('.hero-cta');
+            var scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            setTimeout(function() {
+                if (heroTagline) heroTagline.classList.add('revealed');
+            }, 800);
+            
+            setTimeout(function() {
+                if (heroDesc) heroDesc.classList.add('revealed');
+            }, 1000);
+            
+            setTimeout(function() {
+                if (heroCta) heroCta.classList.add('revealed');
+            }, 1200);
+            
+            setTimeout(function() {
+                if (scrollIndicator) scrollIndicator.classList.add('revealed');
+            }, 1500);
+        });
+        
+        // ========================================
+        // HEADER SCROLL EFFECT
+        // ========================================
+        var header = document.getElementById('luxuryHeader');
+        var lastScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            var currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // ========================================
+        // SEARCH TOGGLE
+        // ========================================
+        var searchWrapper = document.getElementById('searchWrapper');
+        var searchToggle = document.getElementById('searchToggle');
+        
+        searchToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            searchWrapper.classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (!searchWrapper.contains(e.target)) {
+                searchWrapper.classList.remove('active');
+            }
+        });
+        
+        // ========================================
+        // CART MAGNETIC EFFECT
+        // ========================================
+        var cartBtn = document.getElementById('cartBtn');
+        var cartRect;
+        
+        cartBtn.addEventListener('mouseenter', function() {
+            cartRect = cartBtn.getBoundingClientRect();
+        });
+        
+        cartBtn.addEventListener('mousemove', function(e) {
+            var x = e.clientX - cartRect.left - cartRect.width / 2;
+            var y = e.clientY - cartRect.top - cartRect.height / 2;
+            cartBtn.style.transform = 'translate(' + (x * 0.3) + 'px, ' + (y * 0.3) + 'px)';
+        });
+        
+        cartBtn.addEventListener('mouseleave', function() {
+            cartBtn.style.transform = 'translate(0, 0)';
+        });
+        
+        // ========================================
+        // MOBILE MENU TOGGLE
+        // ========================================
+        var menuToggle = document.getElementById('menuToggle');
+        var mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // ========================================
+        // HERO PARALLAX EFFECT
+        // ========================================
+        var heroTextMask = document.getElementById('heroTextMask');
+        var hero = document.getElementById('luxuryHero');
+        
+        document.addEventListener('mousemove', function(e) {
+            if (window.innerWidth < 768) return;
+            
+            var heroRect = hero.getBoundingClientRect();
+            if (heroRect.bottom < 0) return;
+            
+            var x = (e.clientX / window.innerWidth - 0.5) * 30;
+            var y = (e.clientY / window.innerHeight - 0.5) * 30;
+            
+            heroTextMask.style.setProperty('--parallax-x', x + 'px');
+            heroTextMask.style.setProperty('--parallax-y', y + 'px');
+        });
+        
+        // Scroll Parallax for Hero
+        window.addEventListener('scroll', function() {
+            var scrolled = window.pageYOffset;
+            var heroHeight = hero.offsetHeight;
+            
+            if (scrolled < heroHeight) {
+                var parallaxValue = scrolled * 0.4;
+                heroTextMask.style.setProperty('--scroll-parallax', parallaxValue + 'px');
+            }
+        });
+    })();
+    </script>
+
+    <!-- ========================================
+         CART SIDEBAR
+         ======================================== -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+        <div class="cart-sidebar-content">
+            <div class="cart-header">
+                <h3>Giỏ Hàng Của Bạn</h3>
+                <button type="button" class="cart-close" id="cartClose" aria-label="Đóng giỏ hàng">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <!-- Cart items will be rendered here -->
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-total">
+                    <span>Tạm tính:</span>
+                    <span class="cart-total-price" id="cartTotalPrice">0đ</span>
+                </div>
+                <button type="button" class="btn-checkout" id="checkoutBtn">ĐẶT HÀNG</button>
+            </div>
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <svg class="cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <p>Chưa có sản phẩm nào</p>
+                <button type="button" class="btn-continue-shopping" id="continueShopping">Tiếp tục mua sắm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         ORDER MODAL (CHECKOUT FORM)
+         ======================================== -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-overlay" id="orderModalOverlay"></div>
+        <div class="order-modal-content">
+            <button type="button" class="modal-close" id="orderModalClose" aria-label="Đóng">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="order-modal-header">
+                <span class="modal-label">CASARO SOFA</span>
+                <h2>Thông Tin Đặt Hàng</h2>
+            </div>
+            <form class="order-form" id="orderForm">
+                <div class="form-field">
+                    <input type="text" id="orderName" name="name" required placeholder=" ">
+                    <label for="orderName">Họ và tên</label>
+                    <span class="field-line"></span>
+                </div>
+                <div class="form-field">
+                    <input type="tel" id="orderPhone" name="phone" required placeholder=" ">
+                    <label for="orderPhone">Số điện thoại</label>
+                    <span class="field-line"></span>
+                </div>
+                <div class="form-field">
+                    <input type="text" id="orderAddress" name="address" required placeholder=" ">
+                    <label for="orderAddress">Địa chỉ nhận hàng chi tiết</label>
+                    <span class="field-line"></span>
+                </div>
+                <!-- Order Summary -->
+                <div class="order-summary" id="orderSummary">
+                    <!-- Will be populated by JS -->
+                </div>
+                <button type="submit" class="btn-submit-order" id="submitOrderBtn">
+                    <span class="btn-text">HOÀN TẤT ĐẶT HÀNG</span>
+                    <span class="btn-loading">
+                        <svg class="spinner" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4 31.4"/>
+                        </svg>
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SUCCESS MODAL
+         ======================================== -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-overlay" id="successModalOverlay"></div>
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h2 class="success-title">ĐẶT HÀNG THÀNH CÔNG</h2>
+            <p class="success-message" id="successMessage">Cảm ơn bạn. Casaro Sofa sẽ liên hệ lại với bạn trong vòng 15 phút để xác nhận đơn hàng.</p>
+            <button type="button" class="btn-continue" id="successContinue">Tiếp tục mua sắm</button>
+        </div>
+    </div>
+
+    <!-- ========================================
+         CART & CHECKOUT JAVASCRIPT
+         ======================================== -->
+    <script>
+    (function() {
+        // ========================================
+        // CART STATE
+        // ========================================
+        var cart = [];
+        var currentProduct = {
+            name: 'Sofa Gấp Gọn Đa Năng',
+            size: '80cm x 1m85',
+            color: 'Xám',
+            colorCode: '1',
+            originalPrice: 1689000,
+            salePrice: 1299000,
+            image: 'assets/images/sofagapgon/1.1.png'
+        };
+
+        // DOM Elements
+        var cartSidebar = document.getElementById('cartSidebar');
+        var cartOverlay = document.getElementById('cartOverlay');
+        var cartClose = document.getElementById('cartClose');
+        var cartBody = document.getElementById('cartBody');
+        var cartFooter = document.getElementById('cartFooter');
+        var cartEmpty = document.getElementById('cartEmpty');
+        var cartTotalPrice = document.getElementById('cartTotalPrice');
+        var cartCount = document.querySelector('.cart-count');
+        var cartBtn = document.getElementById('cartBtn');
+        var addToCartBtn = document.getElementById('addToCart');
+        var orderNowBtn = document.getElementById('orderNowBtn');
+        var checkoutBtn = document.getElementById('checkoutBtn');
+        var continueShopping = document.getElementById('continueShopping');
+
+        var orderModal = document.getElementById('orderModal');
+        var orderModalOverlay = document.getElementById('orderModalOverlay');
+        var orderModalClose = document.getElementById('orderModalClose');
+        var orderForm = document.getElementById('orderForm');
+        var orderSummary = document.getElementById('orderSummary');
+        var submitOrderBtn = document.getElementById('submitOrderBtn');
+
+        var successModal = document.getElementById('successModal');
+        var successModalOverlay = document.getElementById('successModalOverlay');
+        var successMessage = document.getElementById('successMessage');
+        var successContinue = document.getElementById('successContinue');
+
+        // ========================================
+        // UTILITY FUNCTIONS
+        // ========================================
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ';
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+
+        // ========================================
+        // UPDATE CURRENT PRODUCT FROM SELECTIONS
+        // ========================================
+        function updateCurrentProduct() {
+            var activeSize = document.querySelector('.size-btn.active');
+            var activeColor = document.querySelector('.color-swatch.active');
+            
+            if (activeSize) {
+                currentProduct.size = activeSize.textContent;
+                currentProduct.originalPrice = parseInt(activeSize.dataset.original.replace(/\./g, ''));
+                currentProduct.salePrice = parseInt(activeSize.dataset.sale.replace(/\./g, ''));
+            }
+            
+            if (activeColor) {
+                currentProduct.color = activeColor.dataset.name;
+                currentProduct.colorCode = activeColor.dataset.color;
+                currentProduct.image = 'assets/images/sofagapgon/' + activeColor.dataset.color + '.1.png';
+            }
+        }
+
+        // ========================================
+        // CART FUNCTIONS
+        // ========================================
+        function addToCart() {
+            updateCurrentProduct();
+            
+            var item = {
+                id: generateId(),
+                name: currentProduct.name,
+                size: currentProduct.size,
+                color: currentProduct.color,
+                colorCode: currentProduct.colorCode,
+                originalPrice: currentProduct.originalPrice,
+                salePrice: currentProduct.salePrice,
+                image: currentProduct.image,
+                quantity: 1
+            };
+            
+            cart.push(item);
+            updateCartUI();
+            openCart();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(function(item) {
+                return item.id !== id;
+            });
+            updateCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCartUI();
+        }
+
+        function getCartTotal() {
+            return cart.reduce(function(total, item) {
+                return total + (item.salePrice * item.quantity);
+            }, 0);
+        }
+
+        function updateCartUI() {
+            // Update cart count
+            var totalItems = cart.reduce(function(sum, item) {
+                return sum + item.quantity;
+            }, 0);
+            cartCount.textContent = totalItems;
+
+            // Show/hide empty state
+            if (cart.length === 0) {
+                cartEmpty.style.display = 'flex';
+                cartBody.style.display = 'none';
+                cartFooter.style.display = 'none';
+            } else {
+                cartEmpty.style.display = 'none';
+                cartBody.style.display = 'block';
+                cartFooter.style.display = 'block';
+                renderCartItems();
+            }
+
+            // Update total
+            cartTotalPrice.textContent = formatPrice(getCartTotal());
+        }
+
+        function renderCartItems() {
+            cartBody.innerHTML = cart.map(function(item) {
+                return '<div class="cart-item" data-id="' + item.id + '">' +
+                    '<img src="' + item.image + '" alt="' + item.name + '" class="cart-item-img">' +
+                    '<div class="cart-item-info">' +
+                        '<h4 class="cart-item-name">' + item.name + '</h4>' +
+                        '<p class="cart-item-variant">' + item.color + ' / ' + item.size + '</p>' +
+                        '<p class="cart-item-price">' + formatPrice(item.salePrice) + '</p>' +
+                    '</div>' +
+                    '<button type="button" class="cart-item-remove" data-id="' + item.id + '" aria-label="Xóa">' +
+                        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">' +
+                            '<path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>' +
+                        '</svg>' +
+                    '</button>' +
+                '</div>';
+            }).join('');
+
+            // Attach remove event listeners
+            var removeButtons = cartBody.querySelectorAll('.cart-item-remove');
+            removeButtons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    removeFromCart(this.dataset.id);
+                });
+            });
+        }
+
+        // ========================================
+        // CART SIDEBAR CONTROLS
+        // ========================================
+        function openCart() {
+            cartSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            cartSidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ========================================
+        // ORDER MODAL CONTROLS
+        // ========================================
+        function openOrderModal(fromCart) {
+            updateCurrentProduct();
+            
+            // Build order summary
+            var items = fromCart && cart.length > 0 ? cart : [{
+                name: currentProduct.name,
+                size: currentProduct.size,
+                color: currentProduct.color,
+                salePrice: currentProduct.salePrice,
+                image: currentProduct.image
+            }];
+            
+            var total = fromCart && cart.length > 0 ? getCartTotal() : currentProduct.salePrice;
+            
+            orderSummary.innerHTML = '<div class="summary-title">Đơn hàng của bạn</div>' +
+                items.map(function(item) {
+                    return '<div class="summary-item">' +
+                        '<span class="summary-item-name">' + item.name + '</span>' +
+                        '<span class="summary-item-variant">' + item.color + ' / ' + item.size + '</span>' +
+                        '<span class="summary-item-price">' + formatPrice(item.salePrice) + '</span>' +
+                    '</div>';
+                }).join('') +
+                '<div class="summary-total">' +
+                    '<span>Tổng cộng:</span>' +
+                    '<span>' + formatPrice(total) + '</span>' +
+                '</div>';
+            
+            orderModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            closeCart();
+        }
+
+        function closeOrderModal() {
+            orderModal.classList.remove('active');
+            document.body.style.overflow = '';
+            orderForm.reset();
+            submitOrderBtn.classList.remove('loading');
+        }
+
+        // ========================================
+        // SUCCESS MODAL CONTROLS
+        // ========================================
+        function openSuccessModal(customerName) {
+            var name = customerName || 'bạn';
+            successMessage.textContent = 'Cảm ơn ' + name + '. Casaro Sofa sẽ liên hệ lại với bạn trong vòng 15 phút để xác nhận đơn hàng.';
+            successModal.classList.add('active');
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ========================================
+        // ORDER SUBMISSION
+        // ========================================
+        function submitOrder(e) {
+            e.preventDefault();
+            
+            var formData = {
+                name: document.getElementById('orderName').value,
+                phone: document.getElementById('orderPhone').value,
+                address: document.getElementById('orderAddress').value,
+                items: cart.length > 0 ? cart : [currentProduct],
+                total: cart.length > 0 ? getCartTotal() : currentProduct.salePrice
+            };
+            
+            // Show loading state
+            submitOrderBtn.classList.add('loading');
+            
+            // Simulate API call
+            setTimeout(function() {
+                console.log('Order submitted:', formData);
+                
+                // Close order modal
+                closeOrderModal();
+                
+                // Show success modal
+                openSuccessModal(formData.name);
+                
+                // Clear cart
+                clearCart();
+            }, 1500);
+        }
+
+        // ========================================
+        // EVENT LISTENERS
+        // ========================================
+        
+        // Cart button in header
+        cartBtn.addEventListener('click', function() {
+            openCart();
+        });
+
+        // Add to cart
+        addToCartBtn.addEventListener('click', function() {
+            addToCart();
+        });
+
+        // Order now button
+        orderNowBtn.addEventListener('click', function() {
+            openOrderModal(false);
+        });
+
+        // Cart sidebar controls
+        cartClose.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+        continueShopping.addEventListener('click', closeCart);
+
+        // Checkout from cart
+        checkoutBtn.addEventListener('click', function() {
+            openOrderModal(true);
+        });
+
+        // Order modal controls
+        orderModalClose.addEventListener('click', closeOrderModal);
+        orderModalOverlay.addEventListener('click', closeOrderModal);
+        orderForm.addEventListener('submit', submitOrder);
+
+        // Success modal controls
+        successModalOverlay.addEventListener('click', closeSuccessModal);
+        successContinue.addEventListener('click', closeSuccessModal);
+
+        // Escape key to close modals
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCart();
+                closeOrderModal();
+                closeSuccessModal();
+            }
+        });
+
+        // Initialize cart UI
+        updateCartUI();
+    })();
+    </script>
 </body>
 </html>
