@@ -2869,3 +2869,686 @@ p {
         padding-bottom: max(1rem, env(safe-area-inset-bottom));
     }
 }
+
+
+/* ========================================
+   LUXURY TYPOGRAPHY & MOBILE UI UPGRADE
+   Vietnamese Support - Playfair Display + Montserrat
+   ======================================== */
+
+/* ----------------------------------------
+   TYPOGRAPHY REFINEMENTS
+   ---------------------------------------- */
+
+/* Product Title - Luxury Serif */
+.product-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: #0a192f;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+/* Product Description - Clean Sans */
+.product-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #444444;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+}
+
+/* Price Styling - Luxury Wine Red */
+.price-sale {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: #9e2a2b;
+    letter-spacing: -0.02em;
+}
+
+.price-original {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #888888;
+}
+
+/* Price Badge - Subtle & Elegant */
+.price-badge {
+    background-color: rgba(158, 42, 43, 0.1);
+    color: #9e2a2b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    letter-spacing: 0.03em;
+    padding: 0.375rem 0.625rem;
+    border-radius: 4px;
+    border: 1px solid rgba(158, 42, 43, 0.2);
+}
+
+/* Option Labels */
+.option-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #0a192f;
+    letter-spacing: 0.02em;
+}
+
+.option-label span {
+    color: #9e2a2b;
+    font-weight: 500;
+}
+
+/* Size Buttons - Pill Shape Luxury */
+.size-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    border-radius: 50px;
+    padding: 0.75rem 1.25rem;
+    border: 1.5px solid #d1d5db;
+    background-color: #ffffff;
+    color: #444444;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.size-btn:hover {
+    border-color: #0a192f;
+    color: #0a192f;
+    background-color: #f8f9fa;
+}
+
+.size-btn.active {
+    background-color: #0a192f;
+    border-color: #0a192f;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(10, 25, 47, 0.25);
+}
+
+/* Action Buttons - Refined */
+.btn-primary,
+.btn-order-now {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+}
+
+/* Cart Item Typography */
+.cart-item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    color: #0a192f;
+    line-height: 1.3;
+}
+
+.cart-item-variant {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #666666;
+}
+
+.cart-item-price {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    color: #9e2a2b;
+}
+
+/* Cart Total */
+.cart-total-price {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #0a192f;
+}
+
+/* Order Summary Typography */
+.summary-item-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.summary-item-price {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #9e2a2b;
+}
+
+.summary-total {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Form Labels */
+.form-group label,
+.form-field label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.section-title-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #0a192f;
+}
+
+/* Glass Card Typography */
+.glass-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.glass-card p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Trust Items */
+.trust-item-luxury h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #0a192f;
+}
+
+.trust-item-luxury p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Benefit Typography */
+.benefit-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #0a192f;
+}
+
+.benefit-desc {
+    font-family: 'Montserrat', sans-serif;
+    color: #444444;
+}
+
+.benefit-number {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ----------------------------------------
+   MOBILE UI REFINEMENTS (max-width: 768px)
+   ---------------------------------------- */
+@media (max-width: 768px) {
+    /* Container Spacing */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* Product Title Mobile */
+    .product-title {
+        font-size: 1.625rem;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Product Description Mobile */
+    .product-desc {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        color: #555555;
+        margin-bottom: 1.25rem;
+    }
+    
+    /* Price Section Mobile */
+    .product-price {
+        padding: 1rem;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e9ecef;
+        margin-bottom: 1.5rem;
+    }
+    
+    .price-original {
+        font-size: 0.875rem;
+        order: 2;
+    }
+    
+    .price-sale {
+        font-size: 1.75rem;
+        order: 1;
+    }
+    
+    .price-badge {
+        order: 3;
+        font-size: 0.625rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    /* Size Options Mobile */
+    .size-options {
+        gap: 0.625rem;
+    }
+    
+    .size-btn {
+        flex: 1 1 calc(50% - 0.625rem);
+        min-width: calc(50% - 0.625rem);
+        padding: 0.875rem 0.75rem;
+        font-size: 0.75rem;
+        text-align: center;
+        border-radius: 50px;
+    }
+    
+    .size-btn.active {
+        box-shadow: 0 6px 16px rgba(10, 25, 47, 0.3);
+    }
+    
+    /* Color Options Mobile */
+    .color-options {
+        gap: 0.75rem;
+    }
+    
+    .color-swatch {
+        width: 42px;
+        height: 42px;
+        border-width: 3px;
+    }
+    
+    .color-swatch.active {
+        box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.3);
+    }
+    
+    /* Option Labels Mobile */
+    .option-label {
+        font-size: 0.8125rem;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .product-option {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Action Buttons Mobile */
+    .product-actions {
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-primary,
+    .btn-order-now {
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+        border-radius: 12px;
+        letter-spacing: 0.1em;
+    }
+    
+    .btn-secondary {
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+        border-radius: 12px;
+        border-width: 2px;
+    }
+    
+    /* Main Image Mobile */
+    .main-image {
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Thumbnails Mobile */
+    .variant-thumbnails {
+        gap: 0.5rem;
+    }
+    
+    .variant-thumbnails .thumb {
+        border-radius: 8px;
+        border-width: 2px;
+    }
+    
+    .variant-thumbnails .thumb.active {
+        box-shadow: 0 0 0 2px #0a192f;
+    }
+    
+    /* Section Spacing Mobile */
+    .product-detail {
+        padding: 2rem 0;
+    }
+    
+    /* Storytelling Mobile */
+    .problem-zone,
+    .solution-zone {
+        padding: 50px 0;
+    }
+    
+    .section-label {
+        font-size: 0.6875rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .section-title-serif {
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+    
+    .problem-list-luxury li {
+        font-size: 0.9375rem;
+        padding: 0.625rem 0;
+    }
+    
+    .problem-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Glass Cards Mobile */
+    .solution-cards {
+        gap: 1rem;
+    }
+    
+    .glass-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .glass-card-icon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .glass-card h3 {
+        font-size: 1.0625rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .glass-card p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    
+    /* Benefits Mobile */
+    .benefits-luxury {
+        padding: 50px 0;
+    }
+    
+    .benefits-header {
+        margin-bottom: 2rem;
+    }
+    
+    .benefit-row {
+        margin-bottom: 3rem;
+        gap: 1.5rem;
+    }
+    
+    .benefit-number {
+        font-size: 2.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .benefit-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.625rem;
+    }
+    
+    .benefit-desc {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+    }
+    
+    .benefit-image img {
+        border-radius: 12px;
+    }
+    
+    /* Trust Mobile */
+    .trust-luxury {
+        padding: 50px 0;
+    }
+    
+    .trust-header {
+        margin-bottom: 2rem;
+    }
+    
+    .trust-grid-luxury {
+        gap: 1.5rem;
+    }
+    
+    .trust-item-luxury {
+        padding: 1rem;
+    }
+    
+    .trust-icon-gold {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .trust-item-luxury h3 {
+        font-size: 1rem;
+        margin-bottom: 0.375rem;
+    }
+    
+    .trust-item-luxury p {
+        font-size: 0.8125rem;
+    }
+    
+    /* Form Section Mobile */
+    .form-section {
+        padding: 2.5rem 0;
+    }
+    
+    .form-section h2 {
+        font-size: 1.375rem;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+    }
+    
+    .form-subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-urgency {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-bottom: 1.25rem;
+    }
+    
+    .lead-form {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.8125rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-group input {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .submit-btn {
+        padding: 1rem;
+        font-size: 0.9375rem;
+        border-radius: 10px;
+        letter-spacing: 0.05em;
+    }
+    
+    /* Final CTA Mobile */
+    .final-cta {
+        padding: 2.5rem 0;
+    }
+    
+    .final-cta h2 {
+        font-size: 1.25rem;
+        line-height: 1.35;
+        margin-bottom: 0.75rem;
+    }
+    
+    .final-cta p {
+        font-size: 0.9375rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .final-cta .cta-button {
+        padding: 1rem 2rem;
+        font-size: 0.9375rem;
+        border-radius: 10px;
+    }
+    
+    /* Cart Sidebar Mobile */
+    .cart-header h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.25rem;
+    }
+    
+    .cart-item-name {
+        font-size: 0.9375rem;
+    }
+    
+    .cart-item-variant {
+        font-size: 0.8125rem;
+    }
+    
+    .cart-item-price {
+        font-size: 1rem;
+    }
+    
+    .cart-total-price {
+        font-size: 1.375rem;
+    }
+    
+    .btn-checkout {
+        padding: 1rem;
+        font-size: 0.875rem;
+        border-radius: 10px;
+        letter-spacing: 0.08em;
+    }
+    
+    /* Order Modal Mobile */
+    .order-modal-content {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+    }
+    
+    .order-modal-header h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.5rem;
+    }
+    
+    .form-field input {
+        font-size: 1rem;
+        padding: 0.875rem 0 0.625rem;
+    }
+    
+    .form-field label {
+        font-size: 0.875rem;
+    }
+    
+    .order-summary {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .summary-title {
+        font-size: 0.6875rem;
+    }
+    
+    .summary-item-name {
+        font-size: 0.875rem;
+    }
+    
+    .summary-item-variant {
+        font-size: 0.75rem;
+    }
+    
+    .summary-item-price {
+        font-size: 0.9375rem;
+    }
+    
+    .summary-total {
+        font-size: 1rem;
+    }
+    
+    .btn-submit-order {
+        padding: 1rem;
+        font-size: 0.8125rem;
+        border-radius: 10px;
+        letter-spacing: 0.08em;
+    }
+    
+    /* Success Modal Mobile */
+    .success-modal-content {
+        padding: 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .success-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .success-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.375rem;
+    }
+    
+    .success-message {
+        font-size: 0.9375rem;
+        line-height: 1.65;
+    }
+    
+    .btn-continue {
+        padding: 1rem 1.75rem;
+        font-size: 0.8125rem;
+        border-radius: 10px;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer p {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Extra refinements for very small screens */
+@media (max-width: 375px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .product-title {
+        font-size: 1.5rem;
+    }
+    
+    .price-sale {
+        font-size: 1.5rem;
+    }
+    
+    .size-btn {
+        font-size: 0.6875rem;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .color-swatch {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .btn-primary,
+    .btn-order-now,
+    .btn-secondary {
+        font-size: 0.8125rem;
+        padding: 0.875rem 1rem;
+    }
+}
