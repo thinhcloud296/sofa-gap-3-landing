@@ -599,10 +599,28 @@
     // Mobile menu
     var menuToggle = document.getElementById('menuToggle');
     var mainNav = document.getElementById('mainNav');
+    var navClose = document.getElementById('navClose');
+    var navOverlay = document.getElementById('navOverlay');
+    
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+    
     menuToggle.addEventListener('click', function() {
         menuToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
         document.body.classList.toggle('menu-open');
+    });
+    
+    navClose.addEventListener('click', closeMenu);
+    navOverlay.addEventListener('click', closeMenu);
+    
+    // Close menu when clicking nav links
+    var navLinks = mainNav.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
     });
 
     // ========================================

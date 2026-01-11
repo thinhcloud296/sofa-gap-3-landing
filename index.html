@@ -144,11 +144,19 @@
             
             <!-- Navigation -->
             <nav class="main-nav" id="mainNav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
-                    <li><a href="products.html" class="nav-link">Sản Phẩm</a></li>
-                    <li><a href="#form-section" class="nav-link">Liên Hệ</a></li>
-                </ul>
+                <div class="nav-overlay" id="navOverlay"></div>
+                <div class="nav-content">
+                    <button type="button" class="nav-close" id="navClose" aria-label="Đóng menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
+                        <li><a href="products.html" class="nav-link">Sản Phẩm</a></li>
+                        <li><a href="#form-section" class="nav-link">Liên Hệ</a></li>
+                    </ul>
+                </div>
             </nav>
             
             <!-- Header Actions -->
@@ -209,37 +217,9 @@
                 <!-- Right: Product Info -->
                 <div class="product-info">
                     <h2 class="product-title reveal" data-delay="100">Sofa Gấp Gọn Đa Năng</h2>
-                    <p class="product-desc reveal" data-delay="150">Chất liệu vải cao cấp, khung sườn chắc chắn chịu lực, thiết kế thông minh tiết kiệm diện tích. Phù hợp mọi không gian nhà ở sang trọng.</p>
                     
-                    <!-- Price -->
-                    <div class="product-price reveal" data-delay="200">
-                        <span class="price-original" id="priceOriginal">1.689.000đ</span>
-                        <span class="price-sale" id="priceSale">1.299.000đ</span>
-                        <span class="price-badge">Giảm 23%</span>
-                    </div>
-                    
-                    <!-- Size Selection -->
-                    <div class="product-option reveal" data-delay="250">
-                        <p class="option-label">Kích thước:</p>
-                        <div class="size-options" id="sizeOptions">
-                            <button type="button" class="size-btn active" data-size="1" data-original="1.689.000" data-sale="1.299.000">80cm x 1m85</button>
-                            <button type="button" class="size-btn" data-size="2" data-original="1.949.000" data-sale="1.499.000">1m x 1m85</button>
-                            <button type="button" class="size-btn" data-size="3" data-original="2.209.000" data-sale="1.699.000">1m2 x 1m85</button>
-                            <button type="button" class="size-btn" data-size="4" data-original="2.599.000" data-sale="1.999.000">1m5 x 1m85</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Legs Selection -->
-                    <div class="product-option reveal" data-delay="275">
-                        <p class="option-label">Số chân:</p>
-                        <div class="legs-options" id="legsOptions">
-                            <button type="button" class="legs-btn active" data-legs="4" data-extra="0">4 chân</button>
-                            <button type="button" class="legs-btn" data-legs="6" data-extra="100000">6 chân (+100.000đ)</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Color Selection -->
-                    <div class="product-option reveal" data-delay="300">
+                    <!-- Color Selection - Mobile shows near image -->
+                    <div class="product-option option-color reveal" data-delay="300">
                         <p class="option-label">Màu sắc: <span id="colorName">Xám</span></p>
                         <div class="color-options">
                             <button type="button" class="color-swatch active" data-color="1" data-name="Xám" style="background-color: #878377;" title="Xám"></button>
@@ -250,6 +230,35 @@
                             <button type="button" class="color-swatch" data-color="6" data-name="Xanh navy" style="background-color: #394668;" title="Xanh navy"></button>
                             <button type="button" class="color-swatch" data-color="7" data-name="Xanh lá đậm" style="background-color: #265c51;" title="Xanh lá đậm"></button>
                             <button type="button" class="color-swatch" data-color="8" data-name="Xanh ngọc" style="background-color: #0f9b8e;" title="Xanh ngọc"></button>
+                        </div>
+                    </div>
+                    
+                    <p class="product-desc reveal" data-delay="150">Chất liệu vải cao cấp, khung sườn chắc chắn chịu lực, thiết kế thông minh tiết kiệm diện tích. Phù hợp mọi không gian nhà ở sang trọng.</p>
+                    
+                    <!-- Price -->
+                    <div class="product-price reveal" data-delay="200">
+                        <span class="price-original" id="priceOriginal">1.689.000đ</span>
+                        <span class="price-sale" id="priceSale">1.299.000đ</span>
+                        <span class="price-badge">Giảm 23%</span>
+                    </div>
+                    
+                    <!-- Size Selection -->
+                    <div class="product-option option-size reveal" data-delay="250">
+                        <p class="option-label">Kích thước:</p>
+                        <div class="size-options" id="sizeOptions">
+                            <button type="button" class="size-btn active" data-size="1" data-original="1.689.000" data-sale="1.299.000">80cm x 1m85</button>
+                            <button type="button" class="size-btn" data-size="2" data-original="1.949.000" data-sale="1.499.000">1m x 1m85</button>
+                            <button type="button" class="size-btn" data-size="3" data-original="2.209.000" data-sale="1.699.000">1m2 x 1m85</button>
+                            <button type="button" class="size-btn" data-size="4" data-original="2.599.000" data-sale="1.999.000">1m5 x 1m85</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Legs Selection -->
+                    <div class="product-option option-legs reveal" data-delay="275">
+                        <p class="option-label">Số chân:</p>
+                        <div class="legs-options" id="legsOptions">
+                            <button type="button" class="legs-btn active" data-legs="4" data-extra="0">4 chân</button>
+                            <button type="button" class="legs-btn" data-legs="6" data-extra="100000">6 chân (+100.000đ)</button>
                         </div>
                     </div>
                     
@@ -632,11 +641,28 @@
         // ========================================
         var menuToggle = document.getElementById('menuToggle');
         var mainNav = document.getElementById('mainNav');
+        var navClose = document.getElementById('navClose');
+        var navOverlay = document.getElementById('navOverlay');
+        
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
         
         menuToggle.addEventListener('click', function() {
             menuToggle.classList.toggle('active');
             mainNav.classList.toggle('active');
             document.body.classList.toggle('menu-open');
+        });
+        
+        navClose.addEventListener('click', closeMenu);
+        navOverlay.addEventListener('click', closeMenu);
+        
+        // Close menu when clicking nav links
+        var navLinks = mainNav.querySelectorAll('.nav-link');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', closeMenu);
         });
     })();
     </script>
