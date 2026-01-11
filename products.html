@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://casarosofa.vn/products.html">
     <meta property="og:title" content="Sản Phẩm Sofa Gấp Gọn, Sofa Gấp 3 | CASARO SOFA">
     <meta property="og:description" content="Bộ sưu tập sofa gấp gọn đa năng cao cấp. Đa dạng màu sắc, kích thước. Giá tốt nhất thị trường.">
-    <meta property="og:image" content="https://casarosofa.vn/assets/images/sofagapgon/1.1.png">
+    <meta property="og:image" content="https://casarosofa.vn/assets/images/sofagapgon/1.1.jpg">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:site_name" content="CASARO SOFA">
     
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sản Phẩm Sofa Gấp Gọn, Sofa Gấp 3 | CASARO SOFA">
     <meta name="twitter:description" content="Bộ sưu tập sofa gấp gọn đa năng cao cấp. Đa dạng màu sắc, kích thước.">
-    <meta name="twitter:image" content="https://casarosofa.vn/assets/images/sofagapgon/1.1.png">
+    <meta name="twitter:image" content="https://casarosofa.vn/assets/images/sofagapgon/1.1.jpg">
     
     <!-- Additional SEO -->
     <meta name="geo.region" content="VN">
@@ -37,8 +37,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&subset=vietnamese&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="products.min.css">
     
     <!-- Structured Data - ItemList -->
     <script type="application/ld+json">
@@ -55,7 +55,7 @@
                 "item": {
                     "@type": "Product",
                     "name": "Sofa Gấp Gọn Đa Năng - Màu Xám",
-                    "image": "https://casarosofa.vn/assets/images/sofagapgon/1.1.png",
+                    "image": "https://casarosofa.vn/assets/images/sofagapgon/1.1.jpg",
                     "offers": {
                         "@type": "Offer",
                         "price": "1299000",
@@ -88,6 +88,9 @@
         ]
     }
     </script>
+    
+    <!-- Preload first product image -->
+    <link rel="preload" as="image" href="assets/images/sofagapgon/1.1.jpg" fetchpriority="high">
 </head>
 <body>
     <!-- LUXURY HEADER -->
@@ -95,7 +98,7 @@
         <div class="header-container">
             <!-- Logo -->
             <a href="index.html" class="logo">
-                <img src="assets/images/logo/logo.svg" alt="CASARO SOFA" class="logo-img">
+                <img src="assets/images/logo/logo.svg" alt="CASARO SOFA" class="logo-img" width="120" height="45">
             </a>
             
             <!-- Navigation -->
@@ -310,6 +313,6 @@
         </div>
     </footer>
 
-    <script src="products.js"></script>
+    <script src="products.min.js"></script>
 </body>
 </html>
