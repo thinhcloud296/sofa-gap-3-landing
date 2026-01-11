@@ -1,0 +1,10 @@
+# CASARO SOFA - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://casarosofa.vn/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /.git/
+Disallow: /.vscode/

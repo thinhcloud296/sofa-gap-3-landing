@@ -1,0 +1,515 @@
+/* ========================================
+   PRODUCTS PAGE STYLES
+   ======================================== */
+
+/* Page Layout */
+.products-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .products-page {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    color: #0a192f;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 24px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 50px;
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #0a192f;
+    color: #0a192f;
+}
+
+.filter-btn.active {
+    background: #0a192f;
+    border-color: #0a192f;
+    color: #fff;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.product-card-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #f0f2f5;
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.05);
+}
+
+/* Product Badge */
+.product-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #9e2a2b;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Gift Badge */
+.product-card-gift {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #c5a059, #d4af37);
+    color: #0a192f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.product-card-gift svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* Product Card Info */
+.product-card-info {
+    padding: 16px 20px 20px;
+}
+
+.product-card-category {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #c5a059;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
+.product-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0a192f;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.product-card-color {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8125rem;
+    color: #666;
+    margin: 0 0 12px;
+}
+
+.product-card-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-card-price-original {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product-card-price-sale {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #9e2a2b;
+}
+
+/* ========================================
+   PRODUCT DETAIL MODAL
+   ======================================== */
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.product-modal.active {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.product-modal.active .product-modal-overlay {
+    opacity: 1;
+}
+
+.product-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-modal.active .product-modal-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.modal-product-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .modal-product-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* Modal Gallery */
+.modal-gallery {
+    flex: 1;
+    padding: 24px;
+    background: #f8f9fa;
+}
+
+.modal-main-image {
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+.modal-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.modal-thumbnails img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.modal-thumbnails img:hover {
+    border-color: #c5a059;
+}
+
+.modal-thumbnails img.active {
+    border-color: #0a192f;
+}
+
+/* Modal Product Info */
+.modal-product-info {
+    flex: 1;
+    padding: 32px 24px;
+}
+
+.modal-product-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #c5a059, #d4af37);
+    color: #0a192f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.modal-product-badge:empty {
+    display: none;
+}
+
+.modal-product-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #0a192f;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+.modal-product-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9375rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+.modal-product-price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.modal-price-original {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.modal-price-sale {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #9e2a2b;
+}
+
+.modal-price-badge {
+    background: rgba(158, 42, 43, 0.1);
+    color: #9e2a2b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Modal Options */
+.modal-option {
+    margin-bottom: 20px;
+}
+
+.modal-option-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0a192f;
+    margin-bottom: 10px;
+}
+
+.modal-size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-size-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 50px;
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-size-btn:hover {
+    border-color: #0a192f;
+    color: #0a192f;
+}
+
+.modal-size-btn.active {
+    background: #0a192f;
+    border-color: #0a192f;
+    color: #fff;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (min-width: 480px) {
+    .modal-actions {
+        flex-direction: row;
+    }
+    
+    .modal-actions button {
+        flex: 1;
+    }
+}
+
+/* Responsive Modal */
+@media (max-width: 767px) {
+    .product-modal {
+        padding: 0;
+        align-items: flex-end;
+    }
+    
+    .product-modal-content {
+        max-height: 95vh;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .modal-gallery {
+        padding: 16px;
+    }
+    
+    .modal-product-info {
+        padding: 20px 16px 32px;
+    }
+    
+    .modal-product-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Legs Options */
+.modal-legs-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-legs-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 50px;
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-legs-btn:hover {
+    border-color: #0a192f;
+    color: #0a192f;
+}
+
+.modal-legs-btn.active {
+    background: #0a192f;
+    border-color: #0a192f;
+    color: #fff;
+}
