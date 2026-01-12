@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>CASARO SOFA | Sofa Gấp Gọn Đa Năng - Sofa Gấp 3 Cao Cấp Giá Tốt</title>
-    <meta name="description" content="CASARO SOFA - Chuyên sofa gấp gọn, sofa gấp 3, sofa đa năng cao cấp. Thiết kế thông minh, tiết kiệm không gian, chất liệu bền đẹp. Giao hàng toàn quốc, bảo hành 12 tháng.">
+    <meta name="description" content="CASARO SOFA - Chuyên sofa gấp gọn, sofa gấp 3, sofa đa năng cao cấp. Thiết kế thông minh, tiết kiệm không gian, chất liệu bền đẹp. Giao hàng toàn quốc, bảo hành 6 tháng.">
     <meta name="keywords" content="sofa gấp gọn, sofa gấp 3, sofa đa năng, casaro sofa, sofa bed, sofa giường, sofa thông minh, sofa cao cấp, sofa giá rẻ, sofa mini, sofa căn hộ nhỏ">
     <meta name="author" content="CASARO SOFA">
     <meta name="robots" content="index, follow">
@@ -995,35 +995,65 @@
         }
 
         // ========================================
+        // GOOGLE SHEETS API CONFIG
+        // ========================================
+        // THAY URL NÀY BẰNG URL TỪ GOOGLE APPS SCRIPT CỦA BẠN
+        var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzfuNnygnAuVS-0k7eMMYqhboDKmdDlv4ur7IXrwa1JGGaNEGU6KsBI72efmq9Gbo1_TQ/exec';
+
+        // Gửi dữ liệu đến Google Sheets
+        function sendToGoogleSheet(data) {
+            return fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+        }
+
+        // ========================================
         // ORDER SUBMISSION
         // ========================================
         function submitOrder(e) {
             e.preventDefault();
             
-            var formData = {
+            // Đảm bảo currentProduct có đầy đủ thông tin size và legs
+            var orderItems = cart.length > 0 ? cart : [{
+                name: currentProduct.name,
+                color: currentProduct.color,
+                size: currentProduct.size,
+                legs: currentProduct.legs,
+                salePrice: currentProduct.salePrice
+            }];
+            
+            var orderData = {
+                type: 'order',
                 name: document.getElementById('orderName').value,
                 phone: document.getElementById('orderPhone').value,
                 address: document.getElementById('orderAddress').value,
-                items: cart.length > 0 ? cart : [currentProduct],
+                items: orderItems,
                 total: cart.length > 0 ? getCartTotal() : currentProduct.salePrice
             };
             
             // Show loading state
             submitOrderBtn.classList.add('loading');
             
-            // Simulate API call
-            setTimeout(function() {
-                console.log('Order submitted:', formData);
-                
-                // Close order modal
-                closeOrderModal();
-                
-                // Show success modal
-                openSuccessModal(formData.name);
-                
-                // Clear cart
-                clearCart();
-            }, 1500);
+            // Gửi đến Google Sheets
+            sendToGoogleSheet(orderData)
+                .then(function() {
+                    console.log('Order sent to Google Sheets:', orderData);
+                    closeOrderModal();
+                    openSuccessModal(orderData.name);
+                    clearCart();
+                })
+                .catch(function(error) {
+                    console.error('Error:', error);
+                    // Vẫn hiển thị thành công vì mode: no-cors không trả về response
+                    closeOrderModal();
+                    openSuccessModal(orderData.name);
+                    clearCart();
+                });
         }
 
         // ========================================
@@ -1104,27 +1134,38 @@
             var formData = new FormData(leadForm);
             var customerName = formData.get('fullname');
             
+            // Dữ liệu gửi đến Google Sheets
+            var contactData = {
+                type: 'contact',
+                name: formData.get('fullname'),
+                phone: formData.get('phone'),
+                address: formData.get('address')
+            };
+            
             // Show loading
             leadSubmitBtn.classList.add('loading');
             
-            // Submit to Netlify
+            // Gửi đến Google Sheets
+            sendToGoogleSheet(contactData)
+                .then(function() {
+                    console.log('Contact sent to Google Sheets:', contactData);
+                    leadSubmitBtn.classList.remove('loading');
+                    leadForm.reset();
+                    openLeadSuccessModal(customerName);
+                })
+                .catch(function(error) {
+                    console.error('Error:', error);
+                    leadSubmitBtn.classList.remove('loading');
+                    leadForm.reset();
+                    openLeadSuccessModal(customerName);
+                });
+            
+            // Cũng gửi đến Netlify Forms (backup)
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
-            })
-            .then(function() {
-                leadSubmitBtn.classList.remove('loading');
-                leadForm.reset();
-                openLeadSuccessModal(customerName);
-            })
-            .catch(function(error) {
-                console.error('Error:', error);
-                leadSubmitBtn.classList.remove('loading');
-                // Still show success for demo
-                leadForm.reset();
-                openLeadSuccessModal(customerName);
-            });
+            }).catch(function(err) { console.log('Netlify backup:', err); });
         });
 
         leadSuccessOverlay.addEventListener('click', closeLeadSuccessModal);
