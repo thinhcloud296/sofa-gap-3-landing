@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Vor8RRrnspkvadF53CEOqEhPiIxFDR4D2ljU-dk5LVE" />
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.svg">
+    <link rel="apple-touch-icon" href="assets/images/logo/logo.svg">
+    
     <!-- SEO Meta Tags -->
     <title>CASARO SOFA | Sofa Gấp Gọn Đa Năng - Sofa Gấp 3 Cao Cấp Giá Tốt</title>
     <meta name="description" content="CASARO SOFA - Chuyên sofa gấp gọn, sofa gấp 3, sofa đa năng cao cấp. Thiết kế thông minh, tiết kiệm không gian, chất liệu bền đẹp. Giao hàng toàn quốc, bảo hành 6 tháng.">
@@ -33,10 +37,16 @@
     <meta name="geo.placename" content="Vietnam">
     <meta name="language" content="Vietnamese">
     
-    <!-- Google Fonts - Vietnamese Support -->
+    <!-- Critical CSS - Inline for faster FCP -->
+    <style>
+    *,::after,::before{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#343a40;background:#fff}.luxury-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 0;background:rgba(10,25,47,.85);backdrop-filter:blur(20px)}.header-container{max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}.logo-img{height:45px;width:auto}.main-image{background:#f8f9fa;aspect-ratio:4/3;border-radius:8px}.main-image img{width:100%;height:100%;object-fit:cover}.product-title{font-size:1.5rem;margin-bottom:1rem}.container{max-width:1400px;margin:0 auto;padding:0 1rem}.hero-banner{width:100%;margin-top:77px}.hero-banner-img{width:100%;height:auto;display:block}
+    </style>
+    
+    <!-- Google Fonts - Deferred loading (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&subset=vietnamese&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&subset=vietnamese&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&subset=vietnamese&display=swap"></noscript>
     
     <link rel="stylesheet" href="style.min.css">
     
@@ -105,8 +115,24 @@
     }
     </script>
     
-    <!-- Preload LCP Image for faster loading -->
-    <link rel="preload" as="image" href="assets/images/sofagapgon/1.1.jpg" fetchpriority="high">
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Trang Chủ",
+                "item": "https://casarosofa.id.vn/"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Preload LCP Image (Banner) for faster loading -->
+    <link rel="preload" as="image" href="assets/images/banner/banner.jpg" fetchpriority="high">
     
     <!-- META PIXEL - Replace YOUR_PIXEL_ID with your actual Pixel ID -->
     <!-- 
@@ -175,36 +201,12 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
                         <li><a href="products.html" class="nav-link">Sản Phẩm</a></li>
-                        <li><a href="#form-section" class="nav-link">Liên Hệ</a></li>
                     </ul>
                 </div>
             </nav>
             
             <!-- Header Actions -->
             <div class="header-actions">
-                <!-- Search -->
-                <div class="search-wrapper" id="searchWrapper">
-                    <button class="search-toggle" id="searchToggle" aria-label="Tìm kiếm">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                    </button>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input">
-                    </div>
-                </div>
-                
-                <!-- Cart -->
-                <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <span class="cart-count">0</span>
-                </button>
-                
                 <!-- Mobile Menu Toggle -->
                 <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                     <span></span>
@@ -218,6 +220,11 @@
     <!-- MAIN CONTENT -->
     <main id="main-content">
 
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <img src="assets/images/banner/banner.jpg" alt="CASARO SOFA - Sofa Gấp Gọn Đa Năng" width="1920" height="600" fetchpriority="high" class="hero-banner-img">
+    </section>
+
     <!-- PRODUCT DETAIL SECTION -->
     <section class="product-detail" id="product-detail">
         <div class="container">
@@ -228,7 +235,7 @@
                 <!-- Left: Product Gallery -->
                 <div class="product-gallery reveal" data-delay="0">
                     <div class="main-image">
-                        <img id="mainImg" src="assets/images/sofagapgon/1.1.jpg" alt="Sofa Gấp Gọn Đa Năng CASARO - Màu Xám" width="800" height="600" fetchpriority="high">
+                        <img id="mainImg" src="assets/images/sofagapgon/1.1.jpg" alt="Sofa Gấp Gọn Đa Năng CASARO - Màu Xám" width="800" height="600" loading="lazy">
                     </div>
                     <div class="variant-thumbnails" id="variantThumbs">
                         <img src="assets/images/sofagapgon/1.1.jpg" alt="Sofa Gấp Gọn - Góc 1" class="thumb active" width="150" height="113" loading="lazy">
@@ -289,7 +296,6 @@
                     <!-- Action Buttons -->
                     <div class="product-actions reveal" data-delay="350">
                         <button type="button" class="btn-primary btn-order-now" id="orderNowBtn">ĐẶT HÀNG NGAY</button>
-                        <button type="button" class="btn-secondary" id="addToCart">Thêm Vào Giỏ Hàng</button>
                     </div>
                 </div>
             </div>
@@ -513,16 +519,6 @@
         </div>
     </footer>
     
-    <!-- FLOATING CTA - WhatsApp/Zalo Button -->
-    <div class="floating-cta" id="floatingCta">
-        <a href="https://zalo.me/YOUR_ZALO_NUMBER" class="floating-btn floating-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo">
-            <svg viewBox="0 0 48 48" width="28" height="28"><path fill="#fff" d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm8.15 26.95c-.45.9-2.55 1.75-3.55 1.85-1 .1-1.9.45-6.35-1.35-5.35-2.15-8.7-7.65-8.95-8-.25-.35-2.05-2.75-2.05-5.25s1.3-3.7 1.75-4.2c.45-.5 1-.65 1.35-.65h.95c.3 0 .7-.1 1.1.85.4.95 1.4 3.4 1.5 3.65.1.25.2.55.05.85-.15.3-.2.5-.45.75-.2.25-.45.55-.65.75-.2.2-.45.45-.2.9.25.45 1.15 1.9 2.45 3.05 1.7 1.5 3.1 1.95 3.55 2.2.45.2.7.15.95-.1.25-.25 1.05-1.2 1.35-1.65.25-.4.55-.35.9-.2.35.15 2.25 1.05 2.65 1.25.4.2.65.3.75.45.1.2.1 1.05-.35 1.95z"/></svg>
-        </a>
-        <a href="tel:19009147" class="floating-btn floating-phone" aria-label="Gọi ngay">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </a>
-    </div>
-    
     <!-- LUXURY HEADER & HERO SCRIPTS -->
     <script>
     (function() {
@@ -596,43 +592,6 @@
             }
             
             lastScroll = currentScroll;
-        });
-        
-        // ========================================
-        // SEARCH TOGGLE
-        // ========================================
-        var searchWrapper = document.getElementById('searchWrapper');
-        var searchToggle = document.getElementById('searchToggle');
-        
-        searchToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            searchWrapper.classList.toggle('active');
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (!searchWrapper.contains(e.target)) {
-                searchWrapper.classList.remove('active');
-            }
-        });
-        
-        // ========================================
-        // CART MAGNETIC EFFECT
-        // ========================================
-        var cartBtn = document.getElementById('cartBtn');
-        var cartRect;
-        
-        cartBtn.addEventListener('mouseenter', function() {
-            cartRect = cartBtn.getBoundingClientRect();
-        });
-        
-        cartBtn.addEventListener('mousemove', function(e) {
-            var x = e.clientX - cartRect.left - cartRect.width / 2;
-            var y = e.clientY - cartRect.top - cartRect.height / 2;
-            cartBtn.style.transform = 'translate(' + (x * 0.3) + 'px, ' + (y * 0.3) + 'px)';
-        });
-        
-        cartBtn.addEventListener('mouseleave', function() {
-            cartBtn.style.transform = 'translate(0, 0)';
         });
         
         // ========================================
@@ -801,9 +760,6 @@
         var cartFooter = document.getElementById('cartFooter');
         var cartEmpty = document.getElementById('cartEmpty');
         var cartTotalPrice = document.getElementById('cartTotalPrice');
-        var cartCount = document.querySelector('.cart-count');
-        var cartBtn = document.getElementById('cartBtn');
-        var addToCartBtn = document.getElementById('addToCart');
         var orderNowBtn = document.getElementById('orderNowBtn');
         var checkoutBtn = document.getElementById('checkoutBtn');
         var continueShopping = document.getElementById('continueShopping');
@@ -862,28 +818,6 @@
         // ========================================
         // CART FUNCTIONS
         // ========================================
-        function addToCart() {
-            updateCurrentProduct();
-            
-            var item = {
-                id: generateId(),
-                name: currentProduct.name,
-                size: currentProduct.size,
-                color: currentProduct.color,
-                colorCode: currentProduct.colorCode,
-                legs: currentProduct.legs,
-                originalPrice: currentProduct.originalPrice,
-                salePrice: currentProduct.salePrice,
-                image: currentProduct.image,
-                quantity: 1
-            };
-            
-            cart.push(item);
-            saveCart();
-            updateCartUI();
-            openCart();
-        }
-
         function removeFromCart(id) {
             cart = cart.filter(function(item) {
                 return item.id !== id;
@@ -905,12 +839,6 @@
         }
 
         function updateCartUI() {
-            // Update cart count
-            var totalItems = cart.reduce(function(sum, item) {
-                return sum + item.quantity;
-            }, 0);
-            cartCount.textContent = totalItems;
-
             // Show/hide empty state
             if (cart.length === 0) {
                 cartEmpty.style.display = 'flex';
@@ -956,11 +884,6 @@
         // ========================================
         // CART SIDEBAR CONTROLS
         // ========================================
-        function openCart() {
-            cartSidebar.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
         function closeCart() {
             cartSidebar.classList.remove('active');
             document.body.style.overflow = '';
@@ -1119,16 +1042,6 @@
         // ========================================
         // EVENT LISTENERS
         // ========================================
-        
-        // Cart button in header
-        cartBtn.addEventListener('click', function() {
-            openCart();
-        });
-
-        // Add to cart
-        addToCartBtn.addEventListener('click', function() {
-            addToCart();
-        });
 
         // Order now button
         orderNowBtn.addEventListener('click', function() {
