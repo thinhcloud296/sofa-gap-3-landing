@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://casarosofa.vn/sitemap.xml
+Sitemap: https://casarosofa.id.vn/sitemap.xml
 
 # Disallow admin/private areas (if any)
 Disallow: /.git/
