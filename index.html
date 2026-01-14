@@ -39,7 +39,7 @@
     
     <!-- Critical CSS - Inline for faster FCP -->
     <style>
-    *,::after,::before{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#343a40;background:#fff}.luxury-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 0;background:rgba(10,25,47,.85);backdrop-filter:blur(20px)}.header-container{max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}.logo-img{height:45px;width:auto}.main-image{background:#f8f9fa;aspect-ratio:4/3;border-radius:8px}.main-image img{width:100%;height:100%;object-fit:cover}.product-title{font-size:1.5rem;margin-bottom:1rem}.container{max-width:1400px;margin:0 auto;padding:0 1rem}.hero-banner{width:100%;margin-top:77px}.hero-banner-img{width:100%;height:auto;display:block}
+    *,::after,::before{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#343a40;background:#fff}.main-image{background:#f8f9fa;aspect-ratio:4/3;border-radius:8px}.main-image img{width:100%;height:100%;object-fit:cover}.product-title{font-size:1.5rem;margin-bottom:1rem}.container{max-width:1400px;margin:0 auto;padding:0 1rem}.hero-banner{width:100%}.hero-banner-img{width:100%;height:auto;display:block}.product-detail{padding-top:1.5rem !important}
     </style>
     
     <!-- Google Fonts - Deferred loading (non-blocking) -->
@@ -67,7 +67,7 @@
     }
     </script>
     
-    <!-- Structured Data - Product -->
+    <!-- Structured Data - Product (Sofa) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -81,9 +81,10 @@
         },
         "offers": {
             "@type": "AggregateOffer",
-            "lowPrice": "1299000",
-            "highPrice": "1999000",
+            "lowPrice": "1301400",
+            "highPrice": "2009400",
             "priceCurrency": "VND",
+            "offerCount": "4",
             "availability": "https://schema.org/InStock",
             "seller": {
                 "@type": "Organization",
@@ -94,6 +95,31 @@
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "reviewCount": "256"
+        }
+    }
+    </script>
+    
+    <!-- Structured Data - Product (Gối) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Gối Tựa Sofa CASARO",
+        "image": "https://casarosofa.id.vn/assets/images/sofagapgon/1.5.jpg",
+        "description": "Gối tựa cao cấp, chất liệu vải mềm mại, đàn hồi tốt. Phù hợp kết hợp với sofa hoặc sử dụng riêng để trang trí không gian.",
+        "brand": {
+            "@type": "Brand",
+            "name": "CASARO SOFA"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "53400",
+            "priceCurrency": "VND",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "CASARO SOFA"
+            }
         }
     }
     </script>
@@ -181,47 +207,11 @@
     </script>
 </head>
 <body>
-    <!-- LUXURY HEADER -->
-    <header class="luxury-header" id="luxuryHeader">
-        <div class="header-container">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="assets/images/logo/logo.svg" alt="CASARO SOFA" class="logo-img" width="120" height="45">
-            </a>
-            
-            <!-- Navigation -->
-            <nav class="main-nav" id="mainNav">
-                <div class="nav-overlay" id="navOverlay"></div>
-                <div class="nav-content">
-                    <button type="button" class="nav-close" id="navClose" aria-label="Đóng menu">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 6L6 18M6 6l12 12"/>
-                        </svg>
-                    </button>
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
-                        <li><a href="products.html" class="nav-link">Sản Phẩm</a></li>
-                    </ul>
-                </div>
-            </nav>
-            
-            <!-- Header Actions -->
-            <div class="header-actions">
-                <!-- Mobile Menu Toggle -->
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
     <!-- MAIN CONTENT -->
     <main id="main-content">
 
     <!-- HERO BANNER -->
-    <section class="hero-banner">
+    <section class="hero-banner" style="margin-top: 0;">
         <img src="assets/images/banner/banner.jpg" alt="CASARO SOFA - Sofa Gấp Gọn Đa Năng" width="1920" height="600" fetchpriority="high" class="hero-banner-img">
     </section>
 
@@ -268,19 +258,19 @@
                     
                     <!-- Price -->
                     <div class="product-price reveal" data-delay="200">
-                        <span class="price-original" id="priceOriginal">1.689.000đ</span>
-                        <span class="price-sale" id="priceSale">1.299.000đ</span>
-                        <span class="price-badge">Giảm 23%</span>
+                        <span class="price-original" id="priceOriginal">2.169.000đ</span>
+                        <span class="price-sale" id="priceSale">1.301.400đ</span>
+                        <span class="price-badge">Giảm 40%</span>
                     </div>
                     
                     <!-- Size Selection -->
                     <div class="product-option option-size reveal" data-delay="250">
                         <p class="option-label">Kích thước:</p>
                         <div class="size-options" id="sizeOptions">
-                            <button type="button" class="size-btn active" data-size="1" data-original="1.689.000" data-sale="1.299.000">80cm x 1m85</button>
-                            <button type="button" class="size-btn" data-size="2" data-original="1.949.000" data-sale="1.499.000">1m x 1m85</button>
-                            <button type="button" class="size-btn" data-size="3" data-original="2.209.000" data-sale="1.699.000">1m2 x 1m85</button>
-                            <button type="button" class="size-btn" data-size="4" data-original="2.599.000" data-sale="1.999.000">1m5 x 1m85</button>
+                            <button type="button" class="size-btn active" data-size="1" data-original="2.169.000" data-sale="1.301.400">80cm x 1m85</button>
+                            <button type="button" class="size-btn" data-size="2" data-original="2.499.000" data-sale="1.499.400">1m x 1m85</button>
+                            <button type="button" class="size-btn" data-size="3" data-original="2.799.000" data-sale="1.679.400">1m2 x 1m85</button>
+                            <button type="button" class="size-btn" data-size="4" data-original="3.349.000" data-sale="2.009.400">1m5 x 1m85</button>
                         </div>
                     </div>
                     
@@ -289,7 +279,7 @@
                         <p class="option-label">Số chân:</p>
                         <div class="legs-options" id="legsOptions">
                             <button type="button" class="legs-btn active" data-legs="4" data-extra="0">4 chân</button>
-                            <button type="button" class="legs-btn" data-legs="6" data-extra="100000">6 chân (+100.000đ)</button>
+                            <button type="button" class="legs-btn" data-legs="6" data-extra="100000">6 chân</button>
                         </div>
                     </div>
                     
@@ -297,13 +287,200 @@
                     <div class="product-actions reveal" data-delay="350">
                         <button type="button" class="btn-primary btn-order-now" id="orderNowBtn">ĐẶT HÀNG NGAY</button>
                     </div>
+                    
+                    <!-- Free Shipping Policy -->
+                    <div class="shipping-policy reveal" data-delay="400">
+                        <div class="shipping-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M1 3h15v13H1z"/>
+                                <path d="M16 8h4l3 3v5h-7V8z"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <p class="shipping-text">
+                            <span class="shipping-highlight">🚚 Miễn phí ship</span>
+                            Nội thành TP. Hồ Chí Minh và các tỉnh lân cận (trong bán kính 35km)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENEFITS SECTION - ZIG-ZAG LAYOUT -->
-    <section class="benefits-luxury">
+    <!-- PILLOW PRODUCT SECTION -->
+    <section class="product-detail pillow-section" id="pillow-detail">
+        <div class="container">
+            <div class="product-wrapper">
+                <!-- Left: Pillow Gallery -->
+                <div class="product-gallery reveal" data-delay="0">
+                    <div class="main-image">
+                        <img id="pillowMainImg" src="assets/images/sofagapgon/1.5.jpg" alt="Gối Tựa Sofa - Màu Xám" width="800" height="600" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Right: Pillow Info -->
+                <div class="product-info">
+                    <h2 class="product-title reveal" data-delay="100">Gối Tựa Sofa</h2>
+                    
+                    <!-- Color Selection -->
+                    <div class="product-option option-color reveal" data-delay="200">
+                        <p class="option-label">Màu sắc: <span id="pillowColorName">Xám</span></p>
+                        <div class="color-options">
+                            <button type="button" class="pillow-color-swatch active" data-color="1" data-name="Xám" style="background-color: #878377;" title="Xám"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="2" data-name="Đen" style="background-color: #121212;" title="Đen"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="3" data-name="Trắng kem" style="background-color: #fff6da;" title="Trắng kem"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="4" data-name="Đỏ" style="background-color: #901923;" title="Đỏ"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="5" data-name="Nâu" style="background-color: #5e4230;" title="Nâu"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="6" data-name="Xanh navy" style="background-color: #394668;" title="Xanh navy"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="7" data-name="Xanh lá đậm" style="background-color: #265c51;" title="Xanh lá đậm"></button>
+                            <button type="button" class="pillow-color-swatch" data-color="8" data-name="Xanh ngọc" style="background-color: #0f9b8e;" title="Xanh ngọc"></button>
+                        </div>
+                    </div>
+                    
+                    <p class="product-desc reveal" data-delay="150">Gối tựa cao cấp, chất liệu vải mềm mại, đàn hồi tốt. Phù hợp kết hợp với sofa hoặc sử dụng riêng để trang trí không gian.</p>
+                    
+                    <!-- Price -->
+                    <div class="product-price reveal" data-delay="250">
+                        <span class="price-original">89.000đ</span>
+                        <span class="price-sale">53.400đ</span>
+                        <span class="price-badge">Giảm 40%</span>
+                    </div>
+                    
+                    <!-- Quantity Selection -->
+                    <div class="product-option option-quantity reveal" data-delay="300">
+                        <p class="option-label">Số lượng:</p>
+                        <div class="quantity-selector">
+                            <button type="button" class="qty-btn qty-minus" id="pillowQtyMinus">−</button>
+                            <input type="number" class="qty-input" id="pillowQtyInput" value="1" min="1" max="99" readonly>
+                            <button type="button" class="qty-btn qty-plus" id="pillowQtyPlus">+</button>
+                        </div>
+                        <p class="quantity-total">Thành tiền: <strong id="pillowTotalPrice">53.400đ</strong></p>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="product-actions reveal" data-delay="350">
+                        <button type="button" class="btn-primary btn-order-now" id="pillowOrderBtn">ĐẶT HÀNG NGAY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    /* Shipping Policy */
+    .shipping-policy {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 20px;
+        padding: 16px 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 12px;
+        border-left: 4px solid #c5a059;
+    }
+    .shipping-icon {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+    }
+    .shipping-icon svg {
+        width: 100%;
+        height: 100%;
+        stroke: #c5a059;
+    }
+    .shipping-text {
+        font-size: 0.9375rem;
+        color: #343a40;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .shipping-highlight {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #e53935;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+    
+    /* Pillow Section */
+    .pillow-section {
+        background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        border-top: 1px solid #e9ecef;
+    }
+    .pillow-color-swatch {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+    }
+    .pillow-color-swatch:hover,
+    .pillow-color-swatch.active {
+        transform: scale(1.1);
+    }
+    .pillow-color-swatch.active {
+        box-shadow: 0 0 0 3px var(--color-accent);
+    }
+    /* Quantity Selector */
+    .quantity-selector {
+        display: inline-flex;
+        align-items: center;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+    .qty-btn {
+        width: 44px;
+        height: 44px;
+        background: #f8f9fa;
+        border: none;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #343a40;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .qty-btn:hover {
+        background: #e9ecef;
+    }
+    .qty-btn:active {
+        background: #dee2e6;
+    }
+    .qty-input {
+        width: 60px;
+        height: 44px;
+        border: none;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #0a192f;
+        background: #fff;
+        -moz-appearance: textfield;
+    }
+    .qty-input::-webkit-outer-spin-button,
+    .qty-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .quantity-total {
+        font-size: 1rem;
+        color: #343a40;
+        margin: 0;
+    }
+    .quantity-total strong {
+        color: #c5a059;
+        font-size: 1.25rem;
+    }
+    </style>
+
+    <!-- BENEFITS SECTION - COMPACT GRID -->
+    <section class="benefits-compact">
         <div class="container">
             <div class="benefits-header reveal" data-delay="0">
                 <span class="section-label">LỢI ÍCH</span>
@@ -311,43 +488,417 @@
                 <div class="title-underline"></div>
             </div>
             
-            <!-- Benefit Row 1 -->
-            <div class="benefit-row">
-                <div class="benefit-image reveal" data-delay="100">
-                    <img src="assets/images/sofagapgon/1.1.jpg" alt="Sofa gấp gọn tối ưu không gian" width="600" height="450" loading="lazy">
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card reveal" data-delay="100">
+                    <div class="benefit-card-img">
+                        <img src="assets/images/sofagapgon/1.1.jpg" alt="Sofa gấp gọn tối ưu không gian" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="benefit-card-content">
+                        <span class="benefit-num">01</span>
+                        <h3>Tối Ưu Không Gian</h3>
+                        <p>Thiết kế thông minh giúp tiết kiệm tối đa diện tích. Phù hợp hoàn hảo cho căn hộ nhỏ và không gian sống hiện đại.</p>
+                    </div>
                 </div>
-                <div class="benefit-content reveal" data-delay="200">
-                    <span class="benefit-number">01</span>
-                    <h3 class="benefit-title">Tối Ưu Không Gian</h3>
-                    <p class="benefit-desc">Thiết kế thông minh giúp tiết kiệm tối đa diện tích. Phù hợp hoàn hảo cho căn hộ nhỏ, studio và không gian sống hiện đại.</p>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-card reveal" data-delay="200">
+                    <div class="benefit-card-img">
+                        <img src="assets/images/sofagapgon/3.4.jpg" alt="Sofa đa năng ngồi êm ngủ thoải mái" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="benefit-card-content">
+                        <span class="benefit-num">02</span>
+                        <h3>Ngồi Êm – Ngủ Thoải Mái</h3>
+                        <p>Đệm cao cấp với độ đàn hồi hoàn hảo, hỗ trợ cột sống. Mang đến trải nghiệm nghỉ ngơi tuyệt vời.</p>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Benefit Row 2 - Reversed -->
-            <div class="benefit-row benefit-row-reverse">
-                <div class="benefit-image reveal" data-delay="100">
-                    <img src="assets/images/sofagapgon/3.4.jpg" alt="Sofa đa năng ngồi êm ngủ thoải mái" width="600" height="450" loading="lazy">
-                </div>
-                <div class="benefit-content reveal" data-delay="200">
-                    <span class="benefit-number">02</span>
-                    <h3 class="benefit-title">Ngồi Êm – Ngủ Thoải Mái</h3>
-                    <p class="benefit-desc">Đệm cao cấp với độ đàn hồi hoàn hảo, hỗ trợ cột sống. Mang đến trải nghiệm nghỉ ngơi tuyệt vời cho cả ngồi và nằm.</p>
-                </div>
-            </div>
-            
-            <!-- Benefit Row 3 -->
-            <div class="benefit-row">
-                <div class="benefit-image reveal" data-delay="100">
-                    <img src="assets/images/sofagapgon/6.2.jpg" alt="Sofa gấp 3 bền bỉ êm ái" width="600" height="450" loading="lazy">
-                </div>
-                <div class="benefit-content reveal" data-delay="200">
-                    <span class="benefit-number">03</span>
-                    <h3 class="benefit-title">Bền Bỉ & Êm Ái</h3>
-                    <p class="benefit-desc">Chất liệu vải cao cấp bền bỉ, thoáng mát. Trọng lượng nhẹ, dễ dàng di chuyển khi cần thay đổi không gian.</p>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-card reveal" data-delay="300">
+                    <div class="benefit-card-img">
+                        <img src="assets/images/sofagapgon/6.2.jpg" alt="Sofa gấp 3 bền bỉ êm ái" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="benefit-card-content">
+                        <span class="benefit-num">03</span>
+                        <h3>Bền Bỉ & Êm Ái</h3>
+                        <p>Chất liệu vải cao cấp bền bỉ, thoáng mát. Trọng lượng nhẹ, dễ dàng di chuyển khi cần.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+    /* Benefits Compact Grid */
+    .benefits-compact {
+        background-color: #fff;
+        padding: 80px 0;
+    }
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .benefit-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .benefit-card-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+    }
+    .benefit-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    .benefit-card:hover .benefit-card-img img {
+        transform: scale(1.05);
+    }
+    .benefit-card-content {
+        padding: 20px;
+    }
+    .benefit-num {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgba(197,160,89,0.3);
+        line-height: 1;
+    }
+    .benefit-card-content h3 {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #0a192f;
+        margin: 8px 0;
+    }
+    .benefit-card-content p {
+        font-size: 0.9375rem;
+        color: #6c757d;
+        line-height: 1.6;
+        margin: 0;
+    }
+    @media (min-width: 768px) {
+        .benefits-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .benefits-compact {
+            padding: 100px 0;
+        }
+        .benefit-card-content {
+            padding: 24px;
+        }
+    }
+    </style>
+
+    <!-- PRODUCT SPECIFICATIONS SECTION -->
+    <section class="product-specs">
+        <div class="container">
+            <div class="specs-header reveal" data-delay="0">
+                <span class="section-label">CHI TIẾT</span>
+                <h2 class="section-title-serif">Thông Số Sản Phẩm</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="specs-grid">
+                <!-- Quy cách sản phẩm -->
+                <div class="spec-card reveal" data-delay="100">
+                    <div class="spec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="spec-title">Quy Cách Sản Phẩm</h3>
+                    <div class="spec-content">
+                        <p class="spec-highlight">Độ dày: Phần đệm dày <strong>8cm</strong> tạo độ êm vừa phải khi ngồi.</p>
+                        <ul class="spec-list">
+                            <li><span class="spec-label">Chiều cao</span><span class="spec-value">80cm</span></li>
+                            <li><span class="spec-label">Chiều dài</span><span class="spec-value">1m85</span></li>
+                            <li><span class="spec-label">Chiều ngang</span><span class="spec-value">80cm / 1m / 1m2 / 1m5</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cấu trúc sản phẩm -->
+                <div class="spec-card reveal" data-delay="200">
+                    <div class="spec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="spec-title">Cấu Trúc Sản Phẩm</h3>
+                    <div class="spec-content">
+                        <div class="spec-item">
+                            <span class="spec-item-label">Cấu tạo bên ngoài:</span>
+                            <span class="spec-item-value">Chất vải bố nhập khẩu</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-item-label">Cấu tạo bên trong:</span>
+                            <span class="spec-item-value">Khung thép chịu lực & Đệm mút ép cấu trúc chống xẹp lún tạo cảm giác êm cả ngồi và nằm.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bảo hành -->
+                <div class="spec-card reveal" data-delay="300">
+                    <div class="spec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="spec-title">Cách Thức Bảo Hành</h3>
+                    <div class="spec-content">
+                        <p class="spec-warranty">Bảo hành chính hãng <strong>06 tháng</strong> lỗi kỹ thuật <span class="spec-note">(Áp dụng tại Thành phố Hồ Chí Minh)</span></p>
+                        <p class="spec-warranty">Đối với khách hàng ở tỉnh có thể kiểm tra hàng trước khi nhận.</p>
+                    </div>
+                </div>
+
+                <!-- Đặc tính kỹ thuật -->
+                <div class="spec-card spec-card-full reveal" data-delay="400">
+                    <div class="spec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="spec-title">Đặc Tính Kỹ Thuật</h3>
+                    <div class="spec-content">
+                        <p class="spec-desc">Thiết kế thông minh tích hợp công năng kép <strong>Ghế & Giường</strong>, tối ưu diện tích sử dụng. Sofa được trang bị lớp đệm dày <strong>8cm</strong> chuẩn mực giúp định hình tư thế ngồi vững chãi, bọc ngoài là chất liệu vải bố nhập khẩu với đặc tính thoáng khí tự nhiên, bền bỉ và mát mẻ trong mọi điều kiện thời tiết.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- QUY CÁCH SẢN PHẨM SECTION -->
+    <section class="quycach-section">
+        <div class="container">
+            <div class="quycach-header reveal" data-delay="0">
+                <span class="section-label">HÌNH ẢNH</span>
+                <h2 class="section-title-serif">Quy Cách Sản Phẩm</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="quycach-grid reveal" data-delay="100">
+                <div class="quycach-item">
+                    <img src="assets/images/quycachsanpham/1.jpg" alt="Quy cách sản phẩm - Kích thước sofa" width="600" height="400" loading="lazy">
+                </div>
+                <div class="quycach-item">
+                    <img src="assets/images/quycachsanpham/2.jpg" alt="Quy cách sản phẩm - Chi tiết cấu tạo" width="600" height="400" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    /* Quy Cách Sản Phẩm Section */
+    .quycach-section {
+        background: #ffffff;
+        padding: 80px 0;
+    }
+    .quycach-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .quycach-header .section-title-serif {
+        text-align: center;
+    }
+    .quycach-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .quycach-item {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+    }
+    .quycach-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+    }
+    .quycach-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    @media (min-width: 768px) {
+        .quycach-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .quycach-section {
+            padding: 100px 0;
+        }
+    }
+    </style>
+
+    <style>
+    /* Product Specifications Section */
+    .product-specs {
+        background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+        padding: 100px 0;
+    }
+    .specs-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .specs-header .section-title-serif {
+        text-align: center;
+    }
+    .specs-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .spec-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        border: 1px solid rgba(197,160,89,0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .spec-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        border-color: rgba(197,160,89,0.3);
+    }
+    .spec-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #0a192f 0%, #1a365d 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .spec-icon svg {
+        width: 28px;
+        height: 28px;
+        stroke: #c5a059;
+    }
+    .spec-title {
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #0a192f;
+        margin-bottom: 16px;
+    }
+    .spec-content {
+        color: #343a40;
+    }
+    .spec-highlight {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+    .spec-highlight strong {
+        color: #c5a059;
+        font-weight: 600;
+    }
+    .spec-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .spec-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px dashed rgba(0,0,0,0.1);
+    }
+    .spec-list li:last-child {
+        border-bottom: none;
+    }
+    .spec-label {
+        font-size: 0.9375rem;
+        color: #6c757d;
+    }
+    .spec-value {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #0a192f;
+    }
+    .spec-item {
+        margin-bottom: 16px;
+    }
+    .spec-item:last-child {
+        margin-bottom: 0;
+    }
+    .spec-item-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #c5a059;
+        margin-bottom: 4px;
+    }
+    .spec-item-value {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        color: #343a40;
+    }
+    .spec-warranty {
+        font-size: 1.125rem;
+        margin-bottom: 8px;
+    }
+    .spec-warranty strong {
+        color: #c5a059;
+    }
+    .spec-note {
+        font-size: 0.875rem;
+        color: #6c757d;
+        font-style: italic;
+    }
+    .spec-desc {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+    .spec-desc strong {
+        color: #c5a059;
+        font-weight: 600;
+    }
+    @media (min-width: 768px) {
+        .specs-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .spec-card-full {
+            grid-column: span 2;
+        }
+    }
+    @media (min-width: 1024px) {
+        .specs-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .spec-card-full {
+            grid-column: span 3;
+        }
+        .product-specs {
+            padding: 120px 0;
+        }
+    }
+    </style>
     
     <script>
     (function() {
@@ -434,6 +985,53 @@
         });
         
         attachThumbEvents();
+        
+        // ========================================
+        // PILLOW GALLERY & SELECTION
+        // ========================================
+        var pillowColor = '1';
+        var pillowQty = 1;
+        var pillowPrice = 53400;
+        var pillowMainImg = document.getElementById('pillowMainImg');
+        var pillowSwatches = document.querySelectorAll('.pillow-color-swatch');
+        var pillowColorNameEl = document.getElementById('pillowColorName');
+        var pillowQtyInput = document.getElementById('pillowQtyInput');
+        var pillowTotalPriceEl = document.getElementById('pillowTotalPrice');
+        var pillowQtyMinus = document.getElementById('pillowQtyMinus');
+        var pillowQtyPlus = document.getElementById('pillowQtyPlus');
+        
+        function updatePillowTotal() {
+            var total = pillowPrice * pillowQty;
+            pillowTotalPriceEl.textContent = formatPrice(total);
+        }
+        
+        // Pillow color selection
+        pillowSwatches.forEach(function(swatch) {
+            swatch.addEventListener('click', function() {
+                pillowSwatches.forEach(function(s) { s.classList.remove('active'); });
+                this.classList.add('active');
+                pillowColor = this.dataset.color;
+                pillowColorNameEl.textContent = this.dataset.name;
+                pillowMainImg.src = 'assets/images/sofagapgon/' + pillowColor + '.5.jpg';
+            });
+        });
+        
+        // Quantity controls
+        pillowQtyMinus.addEventListener('click', function() {
+            if (pillowQty > 1) {
+                pillowQty--;
+                pillowQtyInput.value = pillowQty;
+                updatePillowTotal();
+            }
+        });
+        
+        pillowQtyPlus.addEventListener('click', function() {
+            if (pillowQty < 99) {
+                pillowQty++;
+                pillowQtyInput.value = pillowQty;
+                updatePillowTotal();
+            }
+        });
     })();
     </script>
 
@@ -574,53 +1172,6 @@
             setTimeout(function() {
                 if (scrollIndicator) scrollIndicator.classList.add('revealed');
             }, 1500);
-        });
-        
-        // ========================================
-        // HEADER SCROLL EFFECT
-        // ========================================
-        var header = document.getElementById('luxuryHeader');
-        var lastScroll = 0;
-        
-        window.addEventListener('scroll', function() {
-            var currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-        
-        // ========================================
-        // MOBILE MENU TOGGLE
-        // ========================================
-        var menuToggle = document.getElementById('menuToggle');
-        var mainNav = document.getElementById('mainNav');
-        var navClose = document.getElementById('navClose');
-        var navOverlay = document.getElementById('navOverlay');
-        
-        function closeMenu() {
-            menuToggle.classList.remove('active');
-            mainNav.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
-        
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-        
-        navClose.addEventListener('click', closeMenu);
-        navOverlay.addEventListener('click', closeMenu);
-        
-        // Close menu when clicking nav links
-        var navLinks = mainNav.querySelectorAll('.nav-link');
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', closeMenu);
         });
     })();
     </script>
@@ -892,14 +1443,19 @@
         // ========================================
         // ORDER MODAL CONTROLS
         // ========================================
-        function openOrderModal(fromCart) {
-            updateCurrentProduct();
+        function openOrderModal(fromCart, skipUpdate) {
+            // Chỉ update currentProduct nếu không phải từ gối
+            if (!skipUpdate) {
+                updateCurrentProduct();
+            }
             
             // Build order summary
             var items = fromCart && cart.length > 0 ? cart : [{
                 name: currentProduct.name,
                 size: currentProduct.size,
                 color: currentProduct.color,
+                legs: currentProduct.legs,
+                quantity: currentProduct.quantity || 1,
                 salePrice: currentProduct.salePrice,
                 image: currentProduct.image
             }];
@@ -908,9 +1464,15 @@
             
             orderSummary.innerHTML = '<div class="summary-title">Đơn hàng của bạn</div>' +
                 items.map(function(item) {
+                    var variantParts = [];
+                    if (item.color) variantParts.push('Màu ' + item.color);
+                    if (item.size) variantParts.push(item.size);
+                    if (item.legs) variantParts.push(item.legs + ' chân');
+                    var variantText = variantParts.join(' / ') || '';
+                    
                     return '<div class="summary-item">' +
                         '<span class="summary-item-name">' + item.name + '</span>' +
-                        '<span class="summary-item-variant">' + item.color + ' / ' + item.size + (item.legs ? ' / ' + item.legs + ' chân' : '') + '</span>' +
+                        (variantText ? '<span class="summary-item-variant">' + variantText + '</span>' : '') +
                         '<span class="summary-item-price">' + formatPrice(item.salePrice) + '</span>' +
                     '</div>';
                 }).join('') +
@@ -1001,12 +1563,17 @@
         function submitOrder(e) {
             e.preventDefault();
             
-            // Đảm bảo currentProduct có đầy đủ thông tin size và legs
+            // Lấy thông tin sản phẩm
+            var qty = currentProduct.quantity || 1;
+            var unitPrice = currentProduct.unitPrice || currentProduct.salePrice;
+            
             var orderItems = cart.length > 0 ? cart : [{
                 name: currentProduct.name,
                 color: currentProduct.color,
-                size: currentProduct.size,
-                legs: currentProduct.legs,
+                size: currentProduct.size || '',
+                legs: currentProduct.legs || '',
+                quantity: qty,
+                unitPrice: unitPrice,
                 salePrice: currentProduct.salePrice
             }];
             
@@ -1046,6 +1613,33 @@
         // Order now button
         orderNowBtn.addEventListener('click', function() {
             openOrderModal(false);
+        });
+
+        // Pillow order button
+        var pillowOrderBtn = document.getElementById('pillowOrderBtn');
+        pillowOrderBtn.addEventListener('click', function() {
+            // Get pillow data from the pillow section
+            var pillowColorEl = document.querySelector('.pillow-color-swatch.active');
+            var pillowQtyInput = document.getElementById('pillowQtyInput');
+            var qty = parseInt(pillowQtyInput.value) || 1;
+            var pillowUnitPrice = 53400;
+            
+            // Set current product to pillow (không có size và legs)
+            currentProduct = {
+                name: 'Gối Tựa Sofa',
+                size: '',
+                color: pillowColorEl ? pillowColorEl.dataset.name : 'Xám',
+                colorCode: pillowColorEl ? pillowColorEl.dataset.color : '1',
+                legs: '',
+                legsExtra: 0,
+                quantity: qty,
+                unitPrice: pillowUnitPrice,
+                salePrice: pillowUnitPrice * qty,
+                image: 'assets/images/sofagapgon/' + (pillowColorEl ? pillowColorEl.dataset.color : '1') + '.5.jpg'
+            };
+            
+            // Mở modal với skipUpdate = true để không ghi đè dữ liệu gối
+            openOrderModal(false, true);
         });
 
         // Cart sidebar controls
