@@ -2513,161 +2513,11 @@
         // CONVERSION TRACKING HELPER
         // ========================================
 
-        // Meta Conversion API Configuration
-        var META_PIXEL_ID = "1652122502829731";
-        var META_ACCESS_TOKEN =
-          "EAARpTsjUBtgBQkfgQ2eFn9ENeTCrM2LBumPyqIZAJZAabSvA8ZBkaAbZAxt4OjxDwg5I3hu20Ad07nGZBdO8t6MoP9iAvsLYZAH2tGP6ZByYvzBUoslunQJn4ucFhoViPlbBKoZCgvXHfZASFUZAayLgbh1ysWHKteyfGVOWUoj4TfJJbYqYku2FZCNf6eGfiOAvgZDZD";
-        var META_API_VERSION = "v18.0";
-
         // Generate unique event ID for deduplication
         function generateEventId() {
           return (
             "evt_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9)
           );
-        }
-
-        // Get fbclid from URL or session
-        function getFbclid() {
-          var urlParams = new URLSearchParams(window.location.search);
-          return (
-            urlParams.get("fbclid") || sessionStorage.getItem("fbclid") || ""
-          );
-        }
-
-        // Get fbc cookie (click ID)
-        function getFbc() {
-          var fbclid = getFbclid();
-          if (fbclid) {
-            return "fb.1." + Date.now() + "." + fbclid;
-          }
-          return "";
-        }
-
-        // Get fbp cookie (browser ID)
-        function getFbp() {
-          var cookies = document.cookie.split(";");
-          for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            if (cookie.indexOf("_fbp=") === 0) {
-              return cookie.substring(5);
-            }
-          }
-          // Generate if not exists
-          return (
-            "fb.1." + Date.now() + "." + Math.floor(Math.random() * 1000000000)
-          );
-        }
-
-        // Hash function for user data (SHA-256)
-        async function hashData(data) {
-          if (!data) return "";
-          var encoder = new TextEncoder();
-          var dataBuffer = encoder.encode(data.toLowerCase().trim());
-          var hashBuffer = await crypto.subtle.digest("SHA-256", dataBuffer);
-          var hashArray = Array.from(new Uint8Array(hashBuffer));
-          return hashArray
-            .map(function (b) {
-              return b.toString(16).padStart(2, "0");
-            })
-            .join("");
-        }
-
-        // Send event to Meta Conversion API
-        async function sendToConversionAPI(eventName, eventData, userData) {
-          var eventId = generateEventId();
-          var eventTime = Math.floor(Date.now() / 1000);
-
-          // Prepare user data with hashing
-          var hashedUserData = {
-            client_ip_address: "", // Will be captured by server
-            client_user_agent: navigator.userAgent,
-            fbc: getFbc(),
-            fbp: getFbp(),
-          };
-
-          // Hash PII if provided
-          if (userData) {
-            if (userData.phone) {
-              // Normalize phone: remove spaces, dashes, add country code
-              var phone = userData.phone.replace(/[\s-]/g, "");
-              if (phone.startsWith("0")) phone = "84" + phone.substring(1);
-              hashedUserData.ph = await hashData(phone);
-            }
-            if (userData.email) {
-              hashedUserData.em = await hashData(userData.email);
-            }
-            if (userData.firstName) {
-              hashedUserData.fn = await hashData(userData.firstName);
-            }
-            if (userData.lastName) {
-              hashedUserData.ln = await hashData(userData.lastName);
-            }
-            if (userData.city) {
-              hashedUserData.ct = await hashData(userData.city);
-            }
-            if (userData.country) {
-              hashedUserData.country = await hashData(userData.country);
-            }
-          }
-
-          // Prepare event payload
-          var payload = {
-            data: [
-              {
-                event_name: eventName,
-                event_time: eventTime,
-                event_id: eventId,
-                event_source_url: window.location.href,
-                action_source: "website",
-                user_data: hashedUserData,
-              },
-            ],
-          };
-
-          // Add custom data for specific events
-          if (eventData) {
-            payload.data[0].custom_data = {
-              currency: eventData.currency || "VND",
-              value: eventData.value || 0,
-            };
-            if (eventData.content_name) {
-              payload.data[0].custom_data.content_name = eventData.content_name;
-            }
-            if (eventData.content_ids) {
-              payload.data[0].custom_data.content_ids = eventData.content_ids;
-            }
-            if (eventData.content_type) {
-              payload.data[0].custom_data.content_type = eventData.content_type;
-            }
-            if (eventData.num_items) {
-              payload.data[0].custom_data.num_items = eventData.num_items;
-            }
-          }
-
-          // Send to Conversion API
-          var apiUrl =
-            "https://graph.facebook.com/" +
-            META_API_VERSION +
-            "/" +
-            META_PIXEL_ID +
-            "/events?access_token=" +
-            META_ACCESS_TOKEN;
-
-          try {
-            var response = await fetch(apiUrl, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(payload),
-            });
-            var result = await response.json();
-            console.log("Conversion API Response:", result);
-            return { success: true, eventId: eventId, response: result };
-          } catch (error) {
-            console.error("Conversion API Error:", error);
-            return { success: false, error: error };
-          }
         }
 
         function trackConversion(eventName, params, userData) {
@@ -2712,26 +2562,8 @@
             );
           }
 
-          // Meta Conversion API (Server-side)
-          var eventData = {
-            value: params.value,
-            currency: params.currency || "VND",
-            content_name:
-              params.content_name ||
-              (eventName === "purchase"
-                ? "Sofa Gấp Gọn CASARO"
-                : "Contact Form"),
-            content_type: "product",
-            num_items: params.num_items || 1,
-          };
-
-          sendToConversionAPI(fbEventName, eventData, userData)
-            .then(function (result) {
-              console.log("Conversion API sent:", result);
-            })
-            .catch(function (err) {
-              console.error("Conversion API failed:", err);
-            });
+          // Conversion API đã được xử lý server-side qua Google Apps Script
+          // khi gửi dữ liệu đến Google Sheets
 
           // Console log for debugging
           console.log("Conversion tracked:", eventName, params);
@@ -2744,8 +2576,39 @@
         var GOOGLE_SHEET_URL =
           "https://script.google.com/macros/s/AKfycbzfuNnygnAuVS-0k7eMMYqhboDKmdDlv4ur7IXrwa1JGGaNEGU6KsBI72efmq9Gbo1_TQ/exec";
 
-        // Gửi dữ liệu đến Google Sheets
+        // Lấy FBC cookie (click ID)
+        function getFbc() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var fbclid =
+            urlParams.get("fbclid") || sessionStorage.getItem("fbclid") || "";
+          if (fbclid) {
+            return "fb.1." + Date.now() + "." + fbclid;
+          }
+          return "";
+        }
+
+        // Lấy FBP cookie (browser ID)
+        function getFbp() {
+          var cookies = document.cookie.split(";");
+          for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.indexOf("_fbp=") === 0) {
+              return cookie.substring(5);
+            }
+          }
+          return (
+            "fb.1." + Date.now() + "." + Math.floor(Math.random() * 1000000000)
+          );
+        }
+
+        // Gửi dữ liệu đến Google Sheets (và Conversion API qua server-side)
         function sendToGoogleSheet(data) {
+          // Thêm thông tin cho Conversion API
+          data.fbc = getFbc();
+          data.fbp = getFbp();
+          data.userAgent = navigator.userAgent;
+          data.sourceUrl = window.location.href;
+
           return fetch(GOOGLE_SHEET_URL, {
             method: "POST",
             mode: "no-cors",
